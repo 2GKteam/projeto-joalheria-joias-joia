@@ -18,7 +18,7 @@ public class Cliente {
 	@Column(name = "idCliente", nullable = false)
 	private Long idCliente;
 
-	@Column(name = "nomeCliente", nullable = false, length = 100)
+	@Column(name = "nomeClientes", nullable = false, length = 100)
 	private String nomeCliente;
 
 	@Column(name = "cpf", nullable = false, length = 11, unique = true)
