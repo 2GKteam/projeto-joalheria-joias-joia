@@ -1,66 +1,66 @@
 h1 {
-    text-align: center;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    color: #503b35;
+   text-align: center;
+   font-family:Georgia, 'Times New Roman', Times, serif;
+   color: #17113e;
+  }
+  
+  body{
+      background-color:#AFEEEE;
+  }
+  
+  label, input, select, textarea{
+      display: block ;
+      width: 95%;
+      padding: 10px;
+      margin-bottom: 20px;
+  }
+  .roboto-thin {
+     font-family: "Roboto", sans-serif;
    }
-   
-   body{
-       background-color:#f1dad2;
+  
+   form{
+      width: 550px;
+      margin: auto;
+      background: #FCB3AA;
+      padding: 40px;
+      border-radius: 10px;
    }
-   
-   label, input, select, textarea{
-       display: block ;
-       width: 95%;
-       padding: 10px;
-       margin-bottom: 20px;
+   label{
+      font-family: Georgia, 'Times New Roman', Times, serif;
+       color: #17113e;
+      margin: 0;
+      width: 100% ;
+      font-size: 18px;
    }
-   .roboto-thin {
-      font-family: "Roboto", sans-serif;
-    }
-   
-    form{
-       width: 550px;
-       margin: auto;
-       background: #999b86;
-       padding: 40px;
-       border-radius: 10px;
-    }
-    label{
-       font-family: Georgia, 'Times New Roman', Times, serif;
-        color: #503b35;
-       margin: 0;
-       width: 100% ;
-       font-size: 18px;
-    }
-    .emlinha{
-       display: inline;
-       width: 10%;
-       font-size: 16px;
-    }
-    .medidas{
-       display: inline;
-       width: 35%;
-    }
-    input[type='checkbox'], input[type='radio']{
-      margin-right: 0px;
-      margin-left: 15px;
+   .emlinha{
+      display: inline;
+      width: 10%;
+      font-size: 16px;
    }
-   input:focus, select:focus, textarea:focus{
-      outline: none;
-      border: solid 1px #deb8ad;
-      background-color: #f5f0ed;
+   .medidas{
+      display: inline;
+      width: 35%;
    }
-    #enviar{
-      width: 100%;
-      border: 2px solid #deb8ad;
-      background-color: #f5f0ed;
-      color: #deb8ad;
-      font-weight: bold;
-      cursor: pointer;
-      padding: 15px;
-    }
-    #enviar:hover{
-     background-color: #deb8ad;
-     color: #f5f0ed;
-   transition:all linear 0.3;
-    }
+   input[type='checkbox'], input[type='radio']{
+     margin-right: 0px;
+     margin-left: 15px;
+  }
+  input:focus, select:focus, textarea:focus{
+     outline: none;
+     border: solid 1px #17113e;
+     background-color: #cdeff7;
+  }
+   #enviar{
+     width: 100%;
+     border: 2px solid #17113e;
+     background-color: #AFEEEE;
+     color: #17113e;
+     font-weight: bold;
+     cursor: pointer;
+     padding: 15px;
+   }
+   #enviar:hover{
+    background-color: #17113e;
+    color: #f5f0ed;
+  transition:all linear 0.3;
+   }

@@ -148,7 +148,7 @@ body {
     top: 50%;
     transform: translateY(-50%);
     background-color: #8b949d;
-    color: white;
+    color: 3;
     border: none;
     padding: 10px;
     cursor: pointer;
@@ -173,4 +173,10 @@ body {
     text-align: center;
     padding: 10px 0;
     font-size: 14px;
+}
+
+.banner2{
+    background-color: #AFEEEE;
+    text-align: center;
+    border-radius: 0px;
 }
