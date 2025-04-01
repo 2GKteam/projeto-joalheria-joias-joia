@@ -27,6 +27,9 @@ public class Produto {
 	@Column
 	private String cor;
 	
+	@Column
+	private String imgUrl;
+	
 	@ManyToOne
 	@JoinColumn(name = "categoriaProduto", nullable = false)
 	private CategoriaProduto categoriaProduto;
@@ -40,11 +43,12 @@ public class Produto {
 	}
 
 	// Construtores
-	public Produto(Long id_produto, String nome, Double preco, String cor) {
+	public Produto(Long id_produto, String nome, Double preco, String cor, String imgUrl) {
 		this.id_produto = id_produto;
 		this.nome = nome;
 		this.preco = preco;
 		this.cor = cor;
+		this.imgUrl = imgUrl;
 	}
 	// Getters e Setters
 	public Long getId_produto() {
@@ -79,7 +83,9 @@ public class Produto {
 		this.cor = cor;
 	}
 	
-	
+	public String getImgUrl() {
+		return imgUrl;
+	}
 	
 	
 
