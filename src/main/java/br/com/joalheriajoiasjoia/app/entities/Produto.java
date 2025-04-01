@@ -10,7 +10,7 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "tb_produto")
+@Table(name = "tb_produtos")
 public class Produto {
 	
 	//Atributos
