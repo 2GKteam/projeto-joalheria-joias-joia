@@ -10,16 +10,16 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "tb_cliente")
-public class Cliente {
+@Table(name = "tb_usuario")
+public class Usuario {
 	// Atributos
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "idCliente", nullable = false)
-	private Long idCliente;
+	@Column(name = "idUsuario", nullable = false)
+	private Long idUsuario;
 
-	@Column(name = "nomeClientes", nullable = false, length = 100)
-	private String nomeCliente;
+	@Column(name = "nomeUsuario", nullable = false, length = 100)
+	private String nomeUsuario;
 
 	@Column(name = "cpf", nullable = false, length = 11, unique = true)
 	private String cpf;
@@ -34,14 +34,14 @@ public class Cliente {
 	private LocalDate dataNascimento;
 
 	// Construtores
-	public Cliente() {
+	public Usuario() {
 
 	}
 
-	public Cliente(Long idCliente, String nomeCliente, String cpf, String email, String telefone,
+	public Usuario(Long idUsuario, String nomeUsuario, String cpf, String email, String telefone,
 			LocalDate dataNascimento) {
-		this.idCliente = idCliente;
-		this.nomeCliente = nomeCliente;
+		this.idUsuario = idUsuario;
+		this.nomeUsuario = nomeUsuario;
 		this.cpf = cpf;
 		this.email = email;
 		this.telefone = telefone;
@@ -50,20 +50,20 @@ public class Cliente {
 
 	// Getters e setters
 
-	public Long getIdCliente() {
-		return idCliente;
+	public Long getIdUsuario() {
+		return idUsuario;
 	}
 
-	public void setIdCliente(Long idCliente) {
-		this.idCliente = idCliente;
+	public void setIdUsuario(Long idUsuario) {
+		this.idUsuario = idUsuario;
 	}
 
-	public String getNomeCliente() {
-		return nomeCliente;
+	public String getNomeUsario() {
+		return nomeUsuario;
 	}
 
-	public void setNomeCliente(String nomeCliente) {
-		this.nomeCliente = nomeCliente;
+	public void setNomeUsuario(String nomeUsuario) {
+		this.nomeUsuario = nomeUsuario;
 	}
 
 	public String getCpf() {

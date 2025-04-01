@@ -12,37 +12,38 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.joalheriajoiasjoia.app.entities.Categoria;
-import br.com.joalheriajoiasjoia.app.services.CategoriaService;
+import br.com.joalheriajoiasjoia.app.entities.Ornamento;
+import br.com.joalheriajoiasjoia.app.services.OrnamentoService;
+
 @RestController
-@RequestMapping("/categoria")
-public class CategoriaController {
+@RequestMapping("/ornamento")
+public class OrnamentoController {
 
 	@Autowired
-	private CategoriaService categoriaService;
+	private OrnamentoService ornamentoService;
 
 	@PostMapping
-	public Categoria createCategoria(@RequestBody Categoria categoria) {
-		return categoriaService.saveCategoria(categoria);
+	public Ornamento createOrnamento(@RequestBody Ornamento ornamento) {
+		return ornamentoService.saveOrnamento(ornamento);
 	}
 
 	@GetMapping
-	public List<Categoria> getAllCategoria() {
-		return categoriaService.getAllCategoria();
+	public List<Ornamento> getAllOrnamento() {
+		return ornamentoService.getAllOrnamento();
 	}
 
 	@GetMapping("/{id}")
-	public Categoria getCategoria(@PathVariable Long id) {
-		return categoriaService.getCategoriaById(id);
+	public Ornamento getOrnamento(@PathVariable Long id) {
+		return ornamentoService.getOrnamentoById(id);
 	}
 
 	@PutMapping
-	public Categoria editCategoria(@RequestBody Categoria categoria) {
-		return categoriaService.saveCategoria(categoria);
+	public Ornamento editOrnamento(@RequestBody Ornamento ornamento) {
+		return ornamentoService.saveOrnamento(ornamento);
 	}
 
 	@DeleteMapping("/{id}")
-	public void deleteCategoria(@PathVariable Long id) {
-		categoriaService.deleteCategoria(id);
+	public void deleteOrnamento(@PathVariable Long id) {
+		ornamentoService.deleteOrnamento(id);
 	}
 }

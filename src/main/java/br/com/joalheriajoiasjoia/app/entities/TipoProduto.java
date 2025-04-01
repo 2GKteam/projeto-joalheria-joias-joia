@@ -8,32 +8,33 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "tb_categoria")
-public class Categoria {
-	//Atributos
+@Table(name = "tb_tipoProduto")
+public class TipoProduto {
+	// Atributos
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id_categoria;
+	private Long id_tipo;
 
 	@Column
 	private String nome;
 
-	//Construtores
-	public Categoria() {
-		
-	}
-	
-	public Categoria(Long id_categoria, String nome) {
-		this.id_categoria = id_categoria;
-		this.nome = nome;
-	}
-	//Getters e Setters
-	public Long getId_categoria() {
-		return id_categoria;
+	public TipoProduto() {
+
 	}
 
-	public void setId_categoria(Long id_categoria) {
-		this.id_categoria = id_categoria;
+	// Construtores
+	public TipoProduto(Long id_tipo, String nome) {
+		this.id_tipo = id_tipo;
+		this.nome = nome;
+	}
+
+	// Getters e Setters
+	public Long getId_tipoProduto() {
+		return id_tipo;
+	}
+
+	public void setId_tipoProduto(Long id_tipo) {
+		this.id_tipo = id_tipo;
 	}
 
 	public String getNome() {
