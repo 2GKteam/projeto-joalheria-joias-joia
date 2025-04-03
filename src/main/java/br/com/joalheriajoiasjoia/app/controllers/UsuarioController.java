@@ -17,7 +17,7 @@ import br.com.joalheriajoiasjoia.app.entities.Usuario;
 import br.com.joalheriajoiasjoia.app.services.UsuarioService;
 
 @RestController
-@RequestMapping("/cadastrousuario")
+@RequestMapping("/usuarios")
 public class UsuarioController {
 
 	@Autowired
@@ -29,8 +29,8 @@ public class UsuarioController {
 	}
 
 	@GetMapping
-	public List<Usuario> getAllUsuarios() {
-		return usuarioService.getAllUsuarios();
+	public List<Usuario> getAllUsuario() {
+		return usuarioService.getAllUsuario();
 	}
 
 	@GetMapping("/{id}")

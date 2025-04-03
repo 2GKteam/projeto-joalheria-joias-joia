@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () =>{
+document.addEventListener("DOMContentLoaded", () => {
 	
 	const form = document.getElementById("cadastroClienteForm");
 	
@@ -10,10 +10,11 @@ document.addEventListener("DOMContentLoaded", () =>{
 		const email = document.getElementById("email").value;
 		const telefone = document.getElementById("telefone").value;
 		const dt_nascimento = document.getElementById("dt_nascimento").value;
+		const senha = document.getElementById("Senha").value;
 		
 		try{
 			
-			const response = await fetch ("http://localhost:8080/cadastrocliente", {
+			const response = await fetch ("https://localhost:8080/usuario", {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json"
@@ -24,21 +25,22 @@ document.addEventListener("DOMContentLoaded", () =>{
 					email,
 					telefone,
 					dt_nascimento,
+					senha,
 					tipoUsuario: {
 						id: 2
 					}	
 				}), 
 			});
 			
-			if (response.ok){
-				
-				window.location.href = "endereco.html";
-			} else {
-				
-			}
-		} catch (error) {
-			console.error("Erro ao Cadastrar o Cliente:", error);
-		}
+			if (!response.ok) {
+						alert("Erro ao cadastrar o cliente");
+					} else {
+						alert("cadastrado com sucesso");
+						window.location.href = "endereco.html";
+					}
+				} catch (error) {
+					console.error("Erro ao cadastrar o cliente:", error);
+				}
 		
 	});
 });

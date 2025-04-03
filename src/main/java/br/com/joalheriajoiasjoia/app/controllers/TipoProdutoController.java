@@ -16,7 +16,7 @@ import br.com.joalheriajoiasjoia.app.entities.TipoProduto;
 import br.com.joalheriajoiasjoia.app.services.TipoProdutoService;
 
 @RestController
-@RequestMapping("/tipo")
+@RequestMapping("/tipoproduto")
 public class TipoProdutoController {
 
 	@Autowired
