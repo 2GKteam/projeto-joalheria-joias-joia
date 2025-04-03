@@ -39,12 +39,103 @@ public class Endereco {
 	@Column
 	private String complemento;
 	
+	@Column
+	private String logadouro;
+	
+	@Column
+	private String uf;
+	
 	@ManyToOne
 	@JoinColumn(name = "UsuarioEndereco",nullable = false)
-	private Usuario usuarioId; 
+	private Usuario usuarioId;
+
+	
+	public Endereco() {
+		
+	}
+	public Endereco(Long id_endereco, String bairro, String rua, String cidade, String numeroCasa, String estado,
+			String cep, String complemento, String logadouro, String uf, Usuario usuarioId) {
+		this.id_endereco = id_endereco;
+		this.bairro = bairro;
+		this.rua = rua;
+		this.cidade = cidade;
+		this.numeroCasa = numeroCasa;
+		this.estado = estado;
+		this.cep = cep;
+		this.complemento = complemento;
+		this.logadouro = logadouro;
+		this.uf = uf;
+		this.usuarioId = usuarioId;
+	}
+	public Long getId_endereco() {
+		return id_endereco;
+	}
+	public void setId_endereco(Long id_endereco) {
+		this.id_endereco = id_endereco;
+	}
+	public String getBairro() {
+		return bairro;
+	}
+	public void setBairro(String bairro) {
+		this.bairro = bairro;
+	}
+	public String getRua() {
+		return rua;
+	}
+	public void setRua(String rua) {
+		this.rua = rua;
+	}
+	public String getCidade() {
+		return cidade;
+	}
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
+	}
+	public String getNumeroCasa() {
+		return numeroCasa;
+	}
+	public void setNumeroCasa(String numeroCasa) {
+		this.numeroCasa = numeroCasa;
+	}
+	public String getEstado() {
+		return estado;
+	}
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
+	public String getCep() {
+		return cep;
+	}
+	public void setCep(String cep) {
+		this.cep = cep;
+	}
+	public String getComplemento() {
+		return complemento;
+	}
+	public void setComplemento(String complemento) {
+		this.complemento = complemento;
+	}
+	public String getLogadouro() {
+		return logadouro;
+	}
+	public void setLogadouro(String logadouro) {
+		this.logadouro = logadouro;
+	}
+	public String getUf() {
+		return uf;
+	}
+	public void setUf(String uf) {
+		this.uf = uf;
+	}
+	public Usuario getUsuarioId() {
+		return usuarioId;
+	}
+	public void setUsuarioId(Usuario usuarioId) {
+		this.usuarioId = usuarioId;
+	} 
 	
 
-	// Contrutores
 	
-
+	
+	
 }

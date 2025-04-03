@@ -32,6 +32,9 @@ public class Usuario {
 
 	@Column(name = "dt_nascimento", nullable = true, unique = false)
 	private LocalDate dataNascimento;
+	
+	@Column
+	private String senha;
 
 	// Construtores
 	public Usuario() {
@@ -39,13 +42,14 @@ public class Usuario {
 	}
 
 	public Usuario(Long idUsuario, String nomeUsuario, String cpf, String email, String telefone,
-			LocalDate dataNascimento) {
+			LocalDate dataNascimento, String senha) {
 		this.idUsuario = idUsuario;
 		this.nomeUsuario = nomeUsuario;
 		this.cpf = cpf;
 		this.email = email;
 		this.telefone = telefone;
 		this.dataNascimento = dataNascimento;
+		this.senha = senha;
 	}
 
 	// Getters e setters
@@ -96,6 +100,13 @@ public class Usuario {
 
 	public void setDataNascimento(LocalDate dataNascimento) {
 		this.dataNascimento = dataNascimento;
+	}
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
 	}
 
 }
