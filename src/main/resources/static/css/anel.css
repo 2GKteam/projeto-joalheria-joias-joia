@@ -1,9 +1,6 @@
 body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 20px;
-    text-align: center;
-    background-color: #AFEEEE;
+    background-color: #f8f4f4; /* Um tom mais suave */
+    font-family: 'Poppins', sans-serif; /* Fonte elegante */
 }
 .container {
     max-width: 600px;
