@@ -25,7 +25,10 @@ document.addEventListener("DOMContentLoaded", () => {
 					email,
 					telefone,
 					dt_nascimento,
+<<<<<<< HEAD:src/main/resources/static/script/scriptCadastro.js
 					senha,
+=======
+>>>>>>> 648ba29 (alteração no beck end alteração de material para ornamento e tipo para tipoProduto):joalheriaJoiasJoia/src/main/resources/static/script/scriptCadastro.js
 					tipoUsuario: {
 						id: 2
 					}	

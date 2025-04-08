@@ -12,38 +12,38 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.joalheriajoiasjoia.app.entities.Tipo;
-import br.com.joalheriajoiasjoia.app.services.TipoService;
+import br.com.joalheriajoiasjoia.app.entities.TipoProduto;
+import br.com.joalheriajoiasjoia.app.services.TipoProdutoService;
 
 @RestController
 @RequestMapping("/tipo")
-public class TipoController {
+public class TipoProdutoController {
 
 	@Autowired
-	private TipoService tipoService;
+	private TipoProdutoService tipoProdutoService;
 
 	@PostMapping
-	public Tipo createTipo(@RequestBody Tipo tipo) {
-		return tipoService.saveTipo(tipo);
+	public TipoProduto createTipoProduto(@RequestBody TipoProduto tipoProduto) {
+		return tipoProdutoService.saveTipoProduto(tipoProduto);
 	}
 
 	@GetMapping
-	public List<Tipo> getAllTipo() {
-		return tipoService.getAlltipo();
+	public List<TipoProduto> getAllTipoProduto() {
+		return tipoProdutoService.getAlltipoProduto();
 	}
 
 	@GetMapping("/{id}")
-	public Tipo getTipo(@PathVariable Long id) {
-		return tipoService.getTipoById(id);
+	public TipoProduto getTipoProduto(@PathVariable Long id) {
+		return tipoProdutoService.getTipoProdutoById(id);
 	}
 
 	@PutMapping
-	public Tipo editTipo(@RequestBody Tipo tipo) {
-		return tipoService.saveTipo(tipo);
+	public TipoProduto editTipoProduto(@RequestBody TipoProduto tipoProduto) {
+		return tipoProdutoService.saveTipoProduto(tipoProduto);
 	}
 
 	@DeleteMapping("/{id}")
-	public void deleteTipo(@PathVariable Long id) {
-		tipoService.deleteTipo(id);
+	public void deleteTipoProduto(@PathVariable Long id) {
+		tipoProdutoService.deleteTipoProduto(id);
 	}
 }
