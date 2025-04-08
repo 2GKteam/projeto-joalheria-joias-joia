@@ -1,0 +1,26 @@
+.produto-detalhes {
+    max-width: 400px;
+    margin: 40px auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.produto-detalhes img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+}
+
+#produto-nome {
+    font-size: 24px;
+    color: #333;
+}
+
+#produto-preco {
+    font-size: 20px;
+    color: #008000;
+    font-weight: bold;
+}
+
