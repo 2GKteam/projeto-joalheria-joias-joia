@@ -16,7 +16,11 @@ import br.com.joalheriajoiasjoia.app.entities.TipoProduto;
 import br.com.joalheriajoiasjoia.app.services.TipoProdutoService;
 
 @RestController
+<<<<<<< HEAD:src/main/java/br/com/joalheriajoiasjoia/app/controllers/TipoProdutoController.java
 @RequestMapping("/tipoproduto")
+=======
+@RequestMapping("/tipo")
+>>>>>>> 648ba29 (alteração no beck end alteração de material para ornamento e tipo para tipoProduto):joalheriaJoiasJoia/src/main/java/br/com/joalheriajoiasjoia/app/controllers/TipoProdutoController.java
 public class TipoProdutoController {
 
 	@Autowired

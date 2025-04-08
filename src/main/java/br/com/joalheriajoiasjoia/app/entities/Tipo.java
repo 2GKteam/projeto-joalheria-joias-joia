@@ -8,8 +8,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "tb_tipo")
-public class Tipo {
+@Table(name = "tb_tipoProduto")
+public class TipoProduto {
 	// Atributos
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,22 +18,22 @@ public class Tipo {
 	@Column
 	private String nome;
 
-	public Tipo() {
+	public TipoProduto() {
 
 	}
 
 	// Construtores
-	public Tipo(Long id_tipo, String nome) {
+	public TipoProduto(Long id_tipo, String nome) {
 		this.id_tipo = id_tipo;
 		this.nome = nome;
 	}
 
 	// Getters e Setters
-	public Long getId_tipo() {
+	public Long getId_tipoProduto() {
 		return id_tipo;
 	}
 
-	public void setId_tipo(Long id_tipo) {
+	public void setId_tipoProduto(Long id_tipo) {
 		this.id_tipo = id_tipo;
 	}
 
