@@ -1,60 +1,72 @@
-h1 {
-   text-align: center;
-   font-family:Georgia, 'Times New Roman', Times, serif;
-   color: #3d227c;
-  }
-  
-  body{
-      background-color:#AFEEEE;
-  }
-  
-  label, input, select, textarea{
-      display: block ;
-      width: 95%;
-      padding: 10px;
-      margin-bottom: 20px;
-  }
-  .roboto-thin {
-     font-family: "Roboto", sans-serif;
-   }
-  
-   form{
-      width: 550px;
-      margin: auto;
-      background: #FCB3AA;
-      padding: 40px;
-      border-radius: 10px;
-   }
-   label{
-      font-family: Georgia, 'Times New Roman', Times, serif;
-       color: #3d227c;
-      margin: 0;
-      width: 100% ;
-      font-size: 18px;
-   }
-   .emlinha{
-      display: inline;
-      width: 10%;
-      font-size: 16px;
-   }
-   .medidas{
-      display: inline;
-      width: 35%;
-   }
-   input[type='checkbox'], input[type='radio']{
-     margin-right: 0px;
-     margin-left: 15px;
-  }
-  input:focus, select:focus, textarea:focus{
-     outline: none;
-     border: solid 1px #deb8ad;
-     background-color: #f5f0ed;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
 
-  button {
-   text-align: center;
-   font-family: Georgia, 'Times New Roman', Times, serif;
-   background-color: #deb8ad;
-   color: #f5f0ed;
- transition:all linear 0.3;
-   }
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(#f8f4f4, #eecfc1);
+  margin: 0;
+  padding: 0;
+}
+
+.container-produto {
+  max-width: 900px;
+  margin: 50px auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  background-color: #fcb3aa;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.imagem {
+  flex: 1 1 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagem img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.info {
+  flex: 1 1 300px;
+}
+
+#produto-nome {
+  font-size: 28px;
+  color: #2b0a04;
+  margin-bottom: 15px;
+}
+
+#produto-descricao {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.preco {
+  font-size: 24px;
+  color: #a81f34;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+button {
+  background-color: #a81f34;
+  color: #fff;
+  padding: 15px 30px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #891a2b;
+}
+

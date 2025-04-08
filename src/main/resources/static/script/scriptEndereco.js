@@ -23,6 +23,36 @@ document.getElementById("cep").addEventListener("input", async function () {
         }
     }
 });
+document.getElementById("cep").addEventListener("input", async function (){
+const cep = this.value.replace(/\D/g, "");
+
+if(cep.length === 8){
+	try{
+		const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+		
+		if(!response.ok) throw new Error("Erro ao buscar CEP");
+		
+		const dados = await response.json();
+		
+		if (dados.erro){
+			alert("CEP não encontrado.")
+			return;
+		}
+		
+		document.getElementById("rua").value = dados.logradouro;
+		
+		document.getElementById("bairro").value = dados.bairro;
+		
+		document.getElementById("cidade").value = dados.localidade;
+		
+		document.getElementById("estado").value = dados.uf;
+	} catch (error) {
+		alert ("Erro ao buscar o endereço: " + error.message);
+		}
+	
+	}
+	
+});
 
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("cadastroEnderecoForm");
@@ -40,6 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         try {
             const response = await fetch("http://localhost:8080/cadastroendereco", {  
+            const response = await fetch("http://localhost:8080/cadastroendereco", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -58,6 +89,8 @@ document.addEventListener("DOMContentLoaded", () => {
             if (response.ok) {
              
                 alert("Endereço cadastrado com sucesso!");
+            if (!response.ok) {
+                throw new Error("Erro ao cadastrar o Endereço");
             } else {
                 throw new Error("Erro ao cadastrar o Endereço");
             }

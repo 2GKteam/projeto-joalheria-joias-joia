@@ -17,7 +17,11 @@ import br.com.joalheriajoiasjoia.app.entities.Usuario;
 import br.com.joalheriajoiasjoia.app.services.UsuarioService;
 
 @RestController
+<<<<<<< HEAD:src/main/java/br/com/joalheriajoiasjoia/app/controllers/UsuarioController.java
+@RequestMapping("/usuarios")
+=======
 @RequestMapping("/cadastrousuario")
+>>>>>>> 749d37c (backend completo):joalheriaJoiasJoia/src/main/java/br/com/joalheriajoiasjoia/app/controllers/UsuarioController.java
 public class UsuarioController {
 
 	@Autowired
@@ -29,8 +33,13 @@ public class UsuarioController {
 	}
 
 	@GetMapping
+<<<<<<< HEAD:src/main/java/br/com/joalheriajoiasjoia/app/controllers/UsuarioController.java
+	public List<Usuario> getAllUsuario() {
+		return usuarioService.getAllUsuario();
+=======
 	public List<Usuario> getAllUsuarios() {
 		return usuarioService.getAllUsuarios();
+>>>>>>> 749d37c (backend completo):joalheriaJoiasJoia/src/main/java/br/com/joalheriajoiasjoia/app/controllers/UsuarioController.java
 	}
 
 	@GetMapping("/{id}")

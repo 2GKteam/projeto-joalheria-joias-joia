@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+    
     const form = document.getElementById("cadastroProdutoForm");
 
     form.addEventListener("submit", async (event) => {
