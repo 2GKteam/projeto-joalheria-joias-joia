@@ -27,12 +27,9 @@ public class Produto {
 	@Column
 	private String cor;
 	
-<<<<<<< HEAD:src/main/java/br/com/joalheriajoiasjoia/app/entities/Produto.java
 	@Column
 	private String imgUrl;
 	
-=======
->>>>>>> 648ba29 (alteração no beck end alteração de material para ornamento e tipo para tipoProduto):joalheriaJoiasJoia/src/main/java/br/com/joalheriajoiasjoia/app/entities/Produto.java
 	@ManyToOne
 	@JoinColumn(name = "categoriaProduto", nullable = false)
 	private CategoriaProduto categoriaProduto;
