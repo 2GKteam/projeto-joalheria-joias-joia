@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
    
     if (produtoId) {
        
-        fetch(`http://localhost:8080/cadastroproduto/${produtoId}`)
+        fetch(`http://localhost:8080/cadastroproduto/${id_produto}`)
             .then(response => response.json())
             .then(produto => {
                 document.getElementById("produto-img").src = produto.imgUrl;

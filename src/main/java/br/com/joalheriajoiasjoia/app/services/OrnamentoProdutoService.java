@@ -5,10 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-<<<<<<< HEAD
-import br.com.joalheriajoiasjoia.app.entities.Ornamento;
-=======
->>>>>>> 7adea21 (mundança no controller do usuario melhoria no script de cadastro)
 import br.com.joalheriajoiasjoia.app.entities.OrnamentoProduto;
 import br.com.joalheriajoiasjoia.app.repositories.OrnamentoProdutoRepository;
 

@@ -13,7 +13,7 @@ public class TipoProduto {
 	// Atributos
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id_tipo;
+	private Long id_tipoProduto;
 
 	@Column
 	private String nome;
@@ -23,18 +23,18 @@ public class TipoProduto {
 	}
 
 	// Construtores
-	public TipoProduto(Long id_tipo, String nome) {
-		this.id_tipo = id_tipo;
+	public TipoProduto(Long id_tipoProduto, String nome) {
+		this.id_tipoProduto = id_tipoProduto;
 		this.nome = nome;
 	}
 
 	// Getters e Setters
 	public Long getId_tipoProduto() {
-		return id_tipo;
+		return id_tipoProduto;
 	}
 
-	public void setId_tipoProduto(Long id_tipo) {
-		this.id_tipo = id_tipo;
+	public void setId_tipoProduto(Long id_tipoProduto) {
+		this.id_tipoProduto = id_tipoProduto;
 	}
 
 	public String getNome() {

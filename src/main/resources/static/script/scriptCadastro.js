@@ -5,26 +5,26 @@ document.addEventListener("DOMContentLoaded", () => {
 	form.addEventListener("submit", async (event) => {
 		event.preventDefault();
 		
-		const nomeCliente = document.getElementById("nome").value;
+		const nomeUsuario = document.getElementById("nome").value;
 		const cpf = document.getElementById("cpf").value;
 		const email = document.getElementById("email").value;
 		const telefone = document.getElementById("telefone").value;
-		const dt_nascimento = document.getElementById("dt_nascimento").value;
-		const senha = document.getElementById("Senha").value;
+		const dataNascimento = document.getElementById("dt_nascimento").value;
+		const senha = document.getElementById("senha").value;
 		
 		try{
 			
-			const response = await fetch ("https://localhost:8080/usuario", {
+			const response = await fetch ("http://localhost:8080/usuarios", {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json"
 				},
 				body: JSON.stringify({
-					nomeCliente,
+					nomeUsuario,
 					cpf,
 					email,
 					telefone,
-					dt_nascimento,
+					dataNascimento,
 					senha,
 					tipoUsuario: {
 						id: 2
@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
 						alert("Erro ao cadastrar o cliente");
 					} else {
 						alert("cadastrado com sucesso");
+						
 						window.location.href = "endereco.html";
 					}
 				} catch (error) {
