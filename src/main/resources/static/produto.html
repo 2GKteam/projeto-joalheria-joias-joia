@@ -1,36 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-	<link rel="stylesheet" href="./css/produto.css">
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Cadastro Produto</title>
+  <meta charset="UTF-8">
+  <title>Pagina Produto</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/produto.css">
 </head>
-
 <body>
+  <div class="container-produto">
+    <div class="imagem">
+      <img id="produto-img" src="" alt="Imagem do Produto">
+    </div>
 
-	<h1>❀ Cadastro Produto ❀</h1>
+    <div class="info">
+      <h2 id="produto-nome"></h2>
+      <p id="produto-descricao"></p>
+      <p id="produto-preco" class="preco"></p>
+      <button>Comprar</button>
+    </div>
+  </div>
 
-
-	<form id="cadastroProdutoForm">
-
-		<label for="nome"> Nome:</label>
-		<input type="text" name="nome" id="nome" required="required" autofocus><br>
-
-		<label for="nome"> Preço:</label>
-		<input type="text" name="cpf" id="cpf" required="required" autofocus><br>
-
-		<label for="nome"> Cor:</label>
-		<input type="text" name="cpf" id="cpf" required="required" autofocus><br>
-
-		<button type="submit">Cadastrar</button>
-
-		</select>
-		<script src="./css/produto.css"></script>
-		
-	</form>
-
+  <script src="produto.js"></script>
 </body>
-
 </html>

@@ -12,38 +12,38 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.joalheriajoiasjoia.app.entities.Material;
-import br.com.joalheriajoiasjoia.app.services.MaterialService;
+import br.com.joalheriajoiasjoia.app.entities.Ornamento;
+import br.com.joalheriajoiasjoia.app.services.OrnamentoService;
 
 @RestController
-@RequestMapping("/material")
-public class MaterialController {
+@RequestMapping("/ornamento")
+public class OrnamentoController {
 
 	@Autowired
-	private MaterialService materialService;
+	private OrnamentoService ornamentoService;
 
 	@PostMapping
-	public Material createMaterial(@RequestBody Material material) {
-		return materialService.saveMaterial(material);
+	public Ornamento createOrnamento(@RequestBody Ornamento ornamento) {
+		return ornamentoService.saveOrnamento(ornamento);
 	}
 
 	@GetMapping
-	public List<Material> getAllMaterial() {
-		return materialService.getAllMaterial();
+	public List<Ornamento> getAllOrnamento() {
+		return ornamentoService.getAllOrnamento();
 	}
 
 	@GetMapping("/{id}")
-	public Material getMaterial(@PathVariable Long id) {
-		return materialService.getMaterialById(id);
+	public Ornamento getOrnamento(@PathVariable Long id) {
+		return ornamentoService.getOrnamentoById(id);
 	}
 
 	@PutMapping
-	public Material editMaterial(@RequestBody Material material) {
-		return materialService.saveMaterial(material);
+	public Ornamento editOrnamento(@RequestBody Ornamento ornamento) {
+		return ornamentoService.saveOrnamento(ornamento);
 	}
 
 	@DeleteMapping("/{id}")
-	public void deleteMaterial(@PathVariable Long id) {
-		materialService.deleteMaterial(id);
+	public void deleteOrnamento(@PathVariable Long id) {
+		ornamentoService.deleteOrnamento(id);
 	}
 }

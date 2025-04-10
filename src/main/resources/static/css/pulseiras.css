@@ -16,16 +16,8 @@ title{
 }
 
 body {
-<<<<<<< HEAD
     background-color: #f8f4f4; /* Um tom mais suave */
     font-family: 'Poppins', sans-serif; /* Fonte elegante */
-=======
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 20px;
-    text-align: center;
-    background: linear-gradient(  #f8f4f4, #eecfc1);
->>>>>>> dffbda9 (Adicionei as páginas dos materiais, e arrumei as páginas antigas.)
 }
 .container {
     max-width: 600px;

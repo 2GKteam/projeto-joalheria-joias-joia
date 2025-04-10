@@ -8,13 +8,13 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "tb_material")
-public class Material {
+@Table(name = "tb_ornamento")
+public class Ornamento {
 
 	//Atributos
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id_material;
+	private Long id_ornamento;
 	
 	@Column
 	private String nome;
@@ -22,23 +22,23 @@ public class Material {
 	@Column
 	private String tipo;
 	
-	public Material() {
+	public Ornamento() {
 		
 	}
 
 	//Construtores
-	public Material(Long id_material, String nome, String tipo) {
-		this.id_material = id_material;
+	public Ornamento(Long id_ornamento, String nome, String tipo) {
+		this.id_ornamento = id_ornamento;
 		this.nome = nome;
 		this.tipo = tipo;
 	}
 	//Getters e Setters
-	public Long getId_material() {
-		return id_material;
+	public Long getId_ornamento() {
+		return id_ornamento;
 	}
 
-	public void setId_material(Long id_material) {
-		this.id_material = id_material;
+	public void setId_ornamento(Long id_ornamento) {
+		this.id_ornamento = id_ornamento;
 	}
 
 	public String getNome() {

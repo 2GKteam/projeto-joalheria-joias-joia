@@ -19,7 +19,11 @@ public class UsuarioService {
 		return usuarioRepository.save(usuario);
 	}
 	
+<<<<<<< HEAD:src/main/java/br/com/joalheriajoiasjoia/app/services/UsuarioService.java
 	public List<Usuario> getAllUsuario(){
+=======
+	public List<Usuario> getAllUsuarios(){
+>>>>>>> 749d37c (backend completo):joalheriaJoiasJoia/src/main/java/br/com/joalheriajoiasjoia/app/services/UsuarioService.java
 		return usuarioRepository.findAll();
 	}
 	
