@@ -31,9 +31,6 @@ public class UsuarioController {
 	@GetMapping
 	public List<Usuario> getAllUsuario() {
 		return usuarioService.getAllUsuario();
-		
-	public List<Usuario> getAllUsuarios() {
-		return usuarioService.getAllUsuarios();
 	}
 
 	@GetMapping("/{id}")

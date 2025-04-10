@@ -42,11 +42,7 @@ public class Usuario {
 	}
 
 	public Usuario(Long idUsuario, String nomeUsuario, String cpf, String email, String telefone,
-<<<<<<< HEAD:src/main/java/br/com/joalheriajoiasjoia/app/entities/Usuario.java
 			LocalDate dataNascimento, String senha) {
-=======
-			LocalDate dataNascimento) {
->>>>>>> 749d37c (backend completo):joalheriaJoiasJoia/src/main/java/br/com/joalheriajoiasjoia/app/entities/Usuario.java
 		this.idUsuario = idUsuario;
 		this.nomeUsuario = nomeUsuario;
 		this.cpf = cpf;
@@ -58,7 +54,6 @@ public class Usuario {
 
 	// Getters e setters
 
-<<<<<<< HEAD:src/main/java/br/com/joalheriajoiasjoia/app/entities/Usuario.java
 	public Long getIdUsuario() {
 		return idUsuario;
 	}
@@ -73,7 +68,7 @@ public class Usuario {
 
 	public void setNomeUsuario(String nomeUsuario) {
 		this.nomeUsuario = nomeUsuario;
-=======
+	}
 	public Long getIdCliente() {
 		return idUsuario;
 	}
@@ -88,7 +83,6 @@ public class Usuario {
 
 	public void setNomeCliente(String nomeCliente) {
 		this.nomeUsuario = nomeCliente;
->>>>>>> 749d37c (backend completo):joalheriaJoiasJoia/src/main/java/br/com/joalheriajoiasjoia/app/entities/Usuario.java
 	}
 
 	public String getCpf() {
