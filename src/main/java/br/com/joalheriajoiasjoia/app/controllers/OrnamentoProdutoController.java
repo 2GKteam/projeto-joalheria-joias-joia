@@ -12,23 +12,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-<<<<<<< HEAD
-import br.com.joalheriajoiasjoia.app.entities.Ornamento;
-=======
->>>>>>> 7adea21 (mundança no controller do usuario melhoria no script de cadastro)
 import br.com.joalheriajoiasjoia.app.entities.OrnamentoProduto;
 import br.com.joalheriajoiasjoia.app.services.OrnamentoProdutoService;
 
 @RestController
-<<<<<<< HEAD
-@RequestMapping("/ornamentoProduto")
-public class OrnamentoProdutoController {
-
-=======
 @RequestMapping("/ornamentoproduto")
 public class OrnamentoProdutoController {
-	
->>>>>>> 7adea21 (mundança no controller do usuario melhoria no script de cadastro)
 	@Autowired
 	private OrnamentoProdutoService ornamentoProdutoService;
 
@@ -56,8 +45,4 @@ public class OrnamentoProdutoController {
 	public void deleteOrnamentoProduto(@PathVariable Long id) {
 		ornamentoProdutoService.deleteOrnamentoProduto(id);
 	}
-<<<<<<< HEAD
-=======
-
->>>>>>> 7adea21 (mundança no controller do usuario melhoria no script de cadastro)
 }

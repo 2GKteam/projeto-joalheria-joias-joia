@@ -17,7 +17,7 @@ import br.com.joalheriajoiasjoia.app.services.TipoProdutoService;
 
 @RestController
 @RequestMapping("/tipo")
-public class TipoProdutoController {
+public class TipoController {
 
 	@Autowired
 	private TipoProdutoService tipoProdutoService;
@@ -47,3 +47,4 @@ public class TipoProdutoController {
 		tipoProdutoService.deleteTipoProduto(id);
 	}
 }
+

@@ -5,16 +5,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-<<<<<<< HEAD:src/main/java/br/com/joalheriajoiasjoia/app/entities/TipoUsuario.java
-<<<<<<< HEAD:src/main/java/br/com/joalheriajoiasjoia/app/entities/TipoUsuario.java
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-=======
->>>>>>> 749d37c (backend completo):joalheriaJoiasJoia/src/main/java/br/com/joalheriajoiasjoia/app/entities/TipoUsuario.java
-=======
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
->>>>>>> 648ba29 (alteração no beck end alteração de material para ornamento e tipo para tipoProduto):joalheriaJoiasJoia/src/main/java/br/com/joalheriajoiasjoia/app/entities/TipoUsuario.java
 import jakarta.persistence.Table;
 
 @Entity
@@ -26,20 +18,10 @@ public class TipoUsuario {
 	private Long idTipoUsuario;
 	
 	@Column
-	private String nome;
-<<<<<<< HEAD:src/main/java/br/com/joalheriajoiasjoia/app/entities/TipoUsuario.java
-<<<<<<< HEAD:src/main/java/br/com/joalheriajoiasjoia/app/entities/TipoUsuario.java
-=======
->>>>>>> 648ba29 (alteração no beck end alteração de material para ornamento e tipo para tipoProduto):joalheriaJoiasJoia/src/main/java/br/com/joalheriajoiasjoia/app/entities/TipoUsuario.java
-	
+	private String nome;	
 	@ManyToOne
 	@JoinColumn(name = "tipo_usario", nullable = false)
 	private TipoUsuario tipoUsuario;
-<<<<<<< HEAD:src/main/java/br/com/joalheriajoiasjoia/app/entities/TipoUsuario.java
-=======
->>>>>>> 749d37c (backend completo):joalheriaJoiasJoia/src/main/java/br/com/joalheriajoiasjoia/app/entities/TipoUsuario.java
-=======
->>>>>>> 648ba29 (alteração no beck end alteração de material para ornamento e tipo para tipoProduto):joalheriaJoiasJoia/src/main/java/br/com/joalheriajoiasjoia/app/entities/TipoUsuario.java
 
 	public TipoUsuario() {
 		
