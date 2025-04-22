@@ -19,13 +19,13 @@ public class Produto {
 	private Long id_produto;
 	
 	@Column
-	private String nome;
+	private String nomeProduto;
 	
 	@Column
-	private Double preco;
+	private Double precoProduto;
 	
 	@Column
-	private String cor;
+	private String descricaoProduto;
 	
 	@Column
 	private String imgUrl;
@@ -43,11 +43,11 @@ public class Produto {
 	}
 
 	// Construtores
-	public Produto(Long id_produto, String nome, Double preco, String cor, String imgUrl) {
+	public Produto(Long id_produto, String nomeProduto, Double precoProduto, String descricaoProduto, String imgUrl) {
 		this.id_produto = id_produto;
-		this.nome = nome;
-		this.preco = preco;
-		this.cor = cor;
+		this.nomeProduto = nomeProduto;
+		this.precoProduto = precoProduto;
+		this.descricaoProduto = descricaoProduto;
 		this.imgUrl = imgUrl;
 	}
 	// Getters e Setters
@@ -60,27 +60,27 @@ public class Produto {
 	}
 
 	public String getNome() {
-		return nome;
+		return nomeProduto;
 	}
 
 	public void setNome(String nome) {
-		this.nome = nome;
+		this.nomeProduto = nome;
 	}
 
 	public Double getPreco() {
-		return preco;
+		return precoProduto;
 	}
 
 	public void setPreco(Double preco) {
-		this.preco = preco;
+		this.precoProduto = preco;
 	}
 
 	public String getCor() {
-		return cor;
+		return descricaoProduto;
 	}
 
 	public void setCor(String cor) {
-		this.cor = cor;
+		this.descricaoProduto = cor;
 	}
 	
 	public String getImgUrl() {

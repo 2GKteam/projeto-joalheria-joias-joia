@@ -1,9 +1,9 @@
-insert ignore into tb_tipoUsuario(idTipoUsuario,nome) 
+insert ignore into tb_tipoUsuario(idTipoUsuario,nome_tipo_usuario) values
 (1,'Admin'),
 (2,'Cliente'),
 (3,'Vendedor'),
 (4,'Gerente');
-INSERT IGNORE INTO tb_categoria_produto (id_categoria_produto, nome_categoria_produto, descricao_categoria_produto) VALUES
+INSERT IGNORE INTO tb_categoriaProduto (id_categoria, nome_categoria, descricao_categoria) VALUES
 (1, 'Anéis', 'Acesório para os dedos'),
 (2, 'Colares', 'Acesório para o pescoço'),
 (3, 'Brincos', 'Acesório para as orelhas'),
@@ -11,7 +11,8 @@ INSERT IGNORE INTO tb_categoria_produto (id_categoria_produto, nome_categoria_pr
 (5, 'Relógios', 'Acesório para não atrasar no SENAI');
 
 -- Inserindo Tipos (se não existirem)
-INSERT IGNORE INTO tb_tipoProduto (id_tipo_produto, nome_tipo_produto, descricao_tipo_produto) VALUES
+INSERT IGNORE INTO tb_tipoProduto (id_tipoProduto, nome_tipo_produto, descricao_produto) VALUES
 (1, 'Ouro', '18k'),
 (2, 'Prata', '750'),
 (3, 'Bijuteria', 'É biju mas é de rico');
+
