@@ -9,9 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
 		const cpf = document.getElementById("cpf").value;
 		const email = document.getElementById("email").value;
 		const telefone = document.getElementById("telefone").value;
+		const dataNascimento = document.getElementById("dt_nascimento").value;
 		const senha = document.getElementById("senha").value;
-		const dt_nascimento = document.getElementById("dt_nascimento").value;
-
 		
 		try{
 			
@@ -25,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 					cpf,
 					email,
 					telefone,
-					dt_nascimento,
+					dataNascimento,
 					senha,
 					tipoUsuario: {
 						id: 2

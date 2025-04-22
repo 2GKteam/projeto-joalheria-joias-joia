@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
    
     if (produtoId) {
        
-        fetch(`http://localhost:8080/cadastroproduto/${id_produto}`)
+        fetch(`http://localhost:8080/produto/${id_produto}`)
             .then(response => response.json())
             .then(produto => {
                 document.getElementById("produto-img").src = produto.imgUrl;
@@ -14,9 +14,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 document.getElementById("produto-nome").textContent = produto.nomeProduto;
                
-                document.getElementById("produto-descricao").textContent = produto.descricao;
+                document.getElementById("produto-descricao").textContent = produto.descricaoProduto;
                
-                document.getElementById("produto-preco").textContent = `R$ ${produto.preco.toFixed(2)}`;
+                document.getElementById("produto-preco").textContent = `R$ ${produto.precoProduto.toFixed(2)}`;
             })
             .catch(error => console.error("Erro ao carregar produto:", error));
     }

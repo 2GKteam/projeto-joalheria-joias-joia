@@ -16,16 +16,20 @@ public class TipoProduto {
 	private Long id_tipoProduto;
 
 	@Column
-	private String nome;
+	private String nome_tipo_produto;
+	
+	@Column
+	private String descricao_produto;
 
 	public TipoProduto() {
 
 	}
 
 	// Construtores
-	public TipoProduto(Long id_tipoProduto, String nome) {
+	public TipoProduto(Long id_tipoProduto, String nome, String descricao) {
 		this.id_tipoProduto = id_tipoProduto;
-		this.nome = nome;
+		this.nome_tipo_produto = nome;
+		this.descricao_produto = descricao;
 	}
 
 	// Getters e Setters
@@ -38,11 +42,20 @@ public class TipoProduto {
 	}
 
 	public String getNome() {
-		return nome;
+		return nome_tipo_produto;
 	}
 
 	public void setNome(String nome) {
-		this.nome = nome;
+		this.nome_tipo_produto = nome;
 	}
+
+	public String getDescricao() {
+		return descricao_produto;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao_produto = descricao;
+	}
+	
 
 }
