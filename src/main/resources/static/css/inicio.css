@@ -185,7 +185,7 @@ body {
 .menu-suspenso {
     display: none;
     position: absolute;
-    background-color: #ffffff;
+    background-color: #8080;
     color: #ece1e1;
     padding: 10px;
     border-radius: 8px;
@@ -195,7 +195,7 @@ body {
   .menu-item:hover .menu-suspenso {
     display: block;
   }  
-  
+
 a {
     text-decoration: none;
     color: black;
