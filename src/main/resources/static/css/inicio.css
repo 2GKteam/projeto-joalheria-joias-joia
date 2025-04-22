@@ -185,8 +185,8 @@ body {
 .menu-suspenso {
     display: none;
     position: absolute;
-    background-color: #fff;
-    color: #000;
+    background-color: #8080;
+    color: #ece1e1;
     padding: 10px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
