@@ -6,11 +6,11 @@ document.addEventListener("DOMContentLoaded", () => {
         event.preventDefault();
 
         const nome = document.getElementById("nome").value;
-        const preco = document.getElementById("preco").value;
-        const cor = document.getElementById("cor").value;
+        const preco = document.getElementById("pre").value;
+        const cor = document.getElementById("desc").value;
 
         try {
-            const response = await fetch("http://localhost::8080/cadastroproduto", {
+            const response = await fetch("http://localhost::8080/produto", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
