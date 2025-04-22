@@ -31,7 +31,7 @@ public class Produto {
 	private String imgUrl;
 	
 	@ManyToOne
-	@JoinColumn(name = "categoriaProduto", nullable = false)
+	@JoinColumn(name = "categoriaProduto", nullable = true)
 	private CategoriaProduto categoriaProduto;
 	
 	@ManyToOne
