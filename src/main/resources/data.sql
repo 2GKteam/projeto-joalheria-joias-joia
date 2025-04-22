@@ -1,8 +1,14 @@
+CREATE TABLE tb_tipoUsuario (
+    idTipoUsuario INT PRIMARY KEY,
+    nome_tipo_usuario VARCHAR(255) NOT NULL
+);
+
 insert ignore into tb_tipoUsuario(idTipoUsuario,nome_tipo_usuario) values
 (1,'Admin'),
 (2,'Cliente'),
 (3,'Vendedor'),
 (4,'Gerente');
+
 INSERT IGNORE INTO tb_categoriaProduto (id_categoria, nome_categoria, descricao_categoria) VALUES
 (1, 'Anéis', 'Acesório para os dedos'),
 (2, 'Colares', 'Acesório para o pescoço'),
