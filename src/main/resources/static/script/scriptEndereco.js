@@ -40,11 +40,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const cidade = document.getElementById("cidade").value;
         const numero = document.getElementById("numero").value;
         const rua = document.getElementById("rua").value;
-        const complemento = document.getElementById("complemento").value;
+        const informacoes = document.getElementById("informacoes").value;
         const bairro = document.getElementById("bairro").value;
 
         try {
-            const response = await fetch("http://localhost:8080/cadastroendereco", {  
+            const response = await fetch("http://localhost:8080/endereco", {  
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -55,16 +55,16 @@ document.addEventListener("DOMContentLoaded", () => {
                     cidade,
                     numero,
                     rua,
-                    complemento,
+                    informacoes,
                     bairro
                 }),
             });
 
-            if (response.ok) {
+            if (!response.ok) {
              
-                alert("Endereço cadastrado com sucesso!");
+                alert("Erro ao cadastrar o Endereço");
             } else {
-                throw new Error("Erro ao cadastrar o Endereço");
+                throw new Error("Endereço cadastrado com sucesso!");
             }
         } catch (error) {
             console.error("Erro ao Cadastrar o Endereço: ", error);

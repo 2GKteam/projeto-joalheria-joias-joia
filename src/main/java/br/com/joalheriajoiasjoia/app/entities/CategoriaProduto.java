@@ -16,20 +16,20 @@ public class CategoriaProduto {
 	private Long id_categoria;
 
 	@Column
-	private String nome;
+	private String nome_categoria;
 	
 	@Column
-	private String desconto;
+	private String descricao_categoria;
 
 	//Construtores
 	public CategoriaProduto() {
 		
 	}
 	
-	public CategoriaProduto(Long id_categoria, String nome, String desconto) {
+	public CategoriaProduto(Long id_categoria, String nome, String descricao) {
 		this.id_categoria = id_categoria;
-		this.nome = nome;
-		this.desconto = desconto;
+		this.nome_categoria = nome;
+		this.descricao_categoria = descricao;
 	}
 	//Getters e Setters
 	public Long getId_categoria() {
@@ -41,19 +41,19 @@ public class CategoriaProduto {
 	}
 
 	public String getNome() {
-		return nome;
+		return nome_categoria;
 	}
 
 	public void setNome(String nome) {
-		this.nome = nome;
+		this.nome_categoria = nome;
 	}
 	
-	public String getDesconto() {
-		return desconto;
+	public String getDescricao() {
+		return descricao_categoria;
 	}
 	
-	public void setDesconto(String desconto) {
-		this.desconto = desconto;
+	public void setDescricao(String descricao) {
+		this.descricao_categoria = descricao;
 	}
 	
 

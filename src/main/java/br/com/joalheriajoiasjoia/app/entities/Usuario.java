@@ -69,21 +69,6 @@ public class Usuario {
 	public void setNomeUsuario(String nomeUsuario) {
 		this.nomeUsuario = nomeUsuario;
 	}
-	public Long getIdCliente() {
-		return idUsuario;
-	}
-
-	public void setIdCliente(Long idCliente) {
-		this.idUsuario = idCliente;
-	}
-
-	public String getNomeCliente() {
-		return nomeUsuario;
-	}
-
-	public void setNomeCliente(String nomeCliente) {
-		this.nomeUsuario = nomeCliente;
-	}
 
 	public String getCpf() {
 		return cpf;
