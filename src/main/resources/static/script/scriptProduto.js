@@ -6,19 +6,19 @@ document.addEventListener("DOMContentLoaded", () => {
         event.preventDefault();
 
         const nome = document.getElementById("nome").value;
-        const preco = document.getElementById("pre").value;
-        const cor = document.getElementById("desc").value;
+        const pre = document.getElementById("pre").value;
+        const desc = document.getElementById("desc").value;
 
         try {
-            const response = await fetch("http://localhost::8080/produto", {
+            const response = await fetch("http://localhost:8080/produto", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify({
                     nome,
-                    preco,
-                    cor
+                    pre,
+                    desc
                 }),
             });
 
