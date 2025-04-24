@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     form.addEventListener("submit", async (event) => {
         event.preventDefault();
 
+		const img = document.getElementById("imgUrl").value;
         const nome = document.getElementById("nome").value;
         const pre = document.getElementById("pre").value;
         const desc = document.getElementById("desc").value;
@@ -16,7 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify({
-                    nome,
+                    img,
+					nome,
                     pre,
                     desc
                 }),

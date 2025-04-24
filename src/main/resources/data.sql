@@ -1,8 +1,3 @@
-CREATE TABLE tb_tipoUsuario (
-    idTipoUsuario INT PRIMARY KEY,
-    nome_tipo_usuario VARCHAR(255) NOT NULL
-);
-
 insert ignore into tb_tipoUsuario(idTipoUsuario,nome_tipo_usuario) values
 (1,'Admin'),
 (2,'Cliente'),
