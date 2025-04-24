@@ -1,7 +1,9 @@
-insert ignore into tb_tipoUsuario(id_TipoUsuario,nome_tipo_usuario) 
-(2,'Cliente'),
-(3,'Vendedor'),
-(4,'Gerente');
+INSERT IGNORE INTO tb_tipoUsuario (id_TipoUsuario, nome_tipo_usuario) VALUES 
+(1,'Admin'),
+(2, 'Cliente'), 
+(3, 'Vendedor'), 
+(4, 'Gerente');
+
 INSERT IGNORE INTO tb_categoria_Produto (id_categoria, nome_categoria, descricao_categoria) VALUES
 (1, 'Anéis', 'Acesório para os dedos'),
 (2, 'Colares', 'Acesório para o pescoço'),
