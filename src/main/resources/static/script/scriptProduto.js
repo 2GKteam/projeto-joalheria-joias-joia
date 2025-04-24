@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const nome = document.getElementById("nome").value;
         const pre = document.getElementById("pre").value;
         const desc = document.getElementById("desc").value;
-        const imgUrl = document.getElementById("imgUrl").value;
+        const imgUrl = document.getElementById("imgUrl").files[0];
 
         try {
             const response = await fetch("http://localhost:8080/produto", {
