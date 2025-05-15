@@ -1,4 +1,4 @@
-document.getElementById("cep").addEventListener("input", async function () {
+document.getElementById("cep").addEventListener("input", async function() {
   const cep = this.value.replace(/\D/g, "");
 
   if (cep.length === 8) {
@@ -22,7 +22,7 @@ document.getElementById("cep").addEventListener("input", async function () {
       alert("Erro ao buscar o endereço: " + error.message);
     }
   }
-});
+})
 
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("cadastroEnderecoForm");
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
           rua,
           informacoes,
           bairro
-        })
+        }),
       });
 
       if (!response.ok) {
@@ -61,8 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("Endereço cadastrado com sucesso!");  // Aqui mostramos a mensagem de sucesso
       }
     } catch (error) {
-      console.error("Erro ao Cadastrar o Endereço: ", error);
-      alert("Erro ao cadastrar o endereço: " + error.message);
+      alert(error.message);
     }
   });
 });
