@@ -46,8 +46,9 @@ public class Endereco {
 	private String uf;
 	
 	@ManyToOne
-	@JoinColumn(name = "UsuarioEndereco",nullable = false)
-	private Usuario usuarioId;
+	@JoinColumn(name = "id_usuario", nullable = false)
+	private Usuario usuario;
+
 
 	
 	public Endereco() {
@@ -115,7 +116,7 @@ public class Endereco {
 	public void setComplemento(String complemento) {
 		this.complemento = complemento;
 	}
-	public String getLogadouro() {
+	public String getLogradouro() {
 		return logadouro;
 	}
 	public void setLogadouro(String logadouro) {
@@ -127,13 +128,14 @@ public class Endereco {
 	public void setUf(String uf) {
 		this.uf = uf;
 	}
-	public Usuario getUsuarioId() {
-		return usuarioId;
+	public Usuario getUsuario() {
+	    return usuario;
 	}
-	public void setUsuarioId(Usuario usuarioId) {
-		this.usuarioId = usuarioId;
-	} 
-	
+
+	public void setUsuario(Usuario usuario) {
+	    this.usuario = usuario;
+	}
+
 
 	
 	
