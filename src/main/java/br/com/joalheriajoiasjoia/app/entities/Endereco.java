@@ -66,7 +66,7 @@ public class Endereco {
 		this.complemento = complemento;
 		this.logadouro = logadouro;
 		this.uf = uf;
-		this.usuarioId = usuarioId;
+		this.usuario = usuarioId;
 	}
 	public Long getId_endereco() {
 		return id_endereco;
@@ -128,12 +128,12 @@ public class Endereco {
 	public void setUf(String uf) {
 		this.uf = uf;
 	}
-	public Usuario getUsuario() {
+	public Usuario getUsuarioId() {
 	    return usuario;
 	}
 
-	public void setUsuario(Usuario usuario) {
-	    this.usuario = usuario;
+	public void setUsuarioId(Usuario usuarioId) {
+	    this.usuario = usuarioId;
 	}
 
 
