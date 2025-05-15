@@ -1,5 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 insert ignore into tb_tipoUsuario(idTipoUsuario,nome_tipo_usuario) values
+=======
+
+INSERT IGNORE INTO tb_tipoUsuario (id_TipoUsuario, nome_tipo_usuario) VALUES 
+>>>>>>> 2a74676 (criação do banco de dados no mysql)
 (1,'Admin'),
 (2,'Cliente'),
 (3,'Vendedor'),
@@ -25,3 +30,8 @@ INSERT INTO tb_tipo_Produto (id_tipoProduto, nome_tipo_produto, descricao_produt
 (1, 'Ouro', '18k'),
 (2, 'Prata', '750'),
 (3, 'Bijuteria', 'É biju mas é de rico');
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 2a74676 (criação do banco de dados no mysql)
