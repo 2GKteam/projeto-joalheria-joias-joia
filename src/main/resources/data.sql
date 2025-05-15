@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 INSERT IGNORE INTO tb_tipo_usuario (id_tipo_usuario, nome_tipo_usuario) VALUES 
+=======
+INSERT IGNORE INTO tb_tipoUsuario (id_TipoUsuario, nome_tipo_usuario) VALUES 
+>>>>>>> 09e30fc641b33d602cd180be1f15d0e263d0416e
 (1,'Admin'),
 (2,'Cliente'),
 (3,'Vendedor'),
 (4,'Gerente');
+<<<<<<< HEAD
+=======
+
+>>>>>>> 09e30fc641b33d602cd180be1f15d0e263d0416e
 -- Categorias de produtos
 INSERT IGNORE INTO tb_categoria_produto (id_categoria, nome_categoria, descricao_categoria)
 VALUES
@@ -11,8 +19,24 @@ VALUES
 (3, 'Brincos', 'Acessório para as orelhas'),
 (4, 'Pulseiras', 'Acessório para os braços'),
 (5, 'Relógios', 'Acessório para não atrasar no SENAI');
+<<<<<<< HEAD
 -- Inserindo Tipos (se não existirem)
 INSERT IGNORE INTO tb_tipo_produto (id_tipo_produto, nome_tipo_produto, descricao_produto) VALUES
 (1, 'Ouro', '18k'),
 (2, 'Prata', '750'),
 (3, 'Bijuteria', 'É biju mas é de rico');
+=======
+-- Tipos de produtos
+INSERT ignore INTO tb_tipo_produto (id_tipo_produto, nome_tipo_produto, descricao_produto) VALUES
+
+-- Inserindo Tipos (se não existirem)
+INSERT IGNORE INTO tb_tipo_produto (id_tipo_produto, nome_tipo_produto, descricao_tipo_produto) VALUES
+
+(1, 'Ouro', '18k'),
+(2, 'Prata', '750'),
+(3, 'Bijuteria', 'É biju mas é de rico');
+(3, 'Bijuteria', 'É biju mas é de rico');
+
+
+
+>>>>>>> 09e30fc641b33d602cd180be1f15d0e263d0416e
