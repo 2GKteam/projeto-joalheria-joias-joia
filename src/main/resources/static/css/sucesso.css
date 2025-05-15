@@ -1,11 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
-    background-color: #f4f4f4;
+    background-color: #f8f4f4;
     padding: 50px;
 }
 .container {
-    background: white;
+    background: #FCB3AA;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -13,7 +15,7 @@ body {
     margin: auto;
 }
 h1 {
-    color: #4CAF50;
+    color: #2b0a04;
 }
 p {
     color: #333;
@@ -23,10 +25,10 @@ p {
     margin-top: 20px;
     padding: 10px 20px;
     text-decoration: none;
-    background: #4CAF50;
+    background: #c9083f;
     color: white;
     border-radius: 5px;
 }
 .btn:hover {
-    background: #45a049;
+    background: #c9083f
 }
