@@ -27,6 +27,15 @@ document.getElementById("cep").addEventListener("input", async function() {
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("cadastroEnderecoForm");
 
+  // Busca o ID da pessoa armazenado
+    const pessoaId = localStorage.getItem('pessoaId');
+
+    if (!pessoaId) {
+        alert("Pessoa não encontrada. Por favor, cadastre uma pessoa primeiro.");
+        window.location.href = "cadastroPessoa.html";
+        return;
+    }
+
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
