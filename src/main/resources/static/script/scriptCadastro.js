@@ -29,8 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
 					}
 				}),
 			});
-	  
-	  then(response => {
+
+			then(response => {
 				if (response.ok) {
 					return response.json();
 				} else {
