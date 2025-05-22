@@ -58,5 +58,16 @@ public class UsuarioController {
 	public void deleteUsuario(@PathVariable Long id) {
 		usuarioService.deleteUsuario(id);
 	}
+	
+	@PostMapping("/login")
+	public Usuario login(@RequestBody Usuario loginRequest) {
+		Usuario pessoa = usuarioService.autenticarPessoa(loginRequest.getEmail(), loginRequest.getSenha());
+		
+		if (pessoa != null) {
+			return pessoa;
+		} else {
+			return null;
+		}
+	}
 
 }
