@@ -30,26 +30,15 @@ document.addEventListener("DOMContentLoaded", () => {
 				}),
 			});
 
-			then(response => {
-				if (response.ok) {
-					return response.json();
-				} else {
-					throw new Error('Erro ao cadastrar usuário');
-				}
-			})
-				.then(data => {
-					alert('Usuário cadastrado com sucesso!\nNomeUsuario: ' + data.nomeUsuario);
-					window.location.href = 'index.html';
-				})
-
-
 			if (!response.ok) {
-				throw new Error('Erro ao cadastrar pessoa');
+				throw new Error('Erro ao cadastrar usuário');
 			}
 
 			const data = await response.json();
 
-			localStorage.setItem('pessoaId', data.idUsuario); // Confirme o nome da propriedade retornada pelo backend
+			alert('Usuário cadastrado com sucesso!\nNomeUsuario: ' + data.nomeUsuario);
+
+			localStorage.setItem('pessoaId', data.idUsuario); // Verifique o nome correto da propriedade
 
 			window.location.href = './endereco.html';
 
