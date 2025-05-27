@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
         formData.append("imgUrl", imgUrl);
 
         try {
-            fetch("http://localhost:8080/produto", {
+			fetch("http://localhost:8080/produto", {
                 method: "POST",
                 body: formData
             });
