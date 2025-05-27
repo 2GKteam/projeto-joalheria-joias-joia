@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		const senha = document.getElementById("senha").value;
 
 		try {
-			const response = await fetch("http://localhost:8080/usuarios", {
+			fetch("http://localhost:8080/usuarios", {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json"
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
 					dataNascimento,
 					senha,
 					tipoUsuario: {
-						id: 2
+						idTipoUsuario: 2
 					}
 				}),
 			});
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 			window.location.href = './endereco.html';
 
-		} catch (error) {
+			}catch (error){
 			console.error('Erro no cadastro:', error);
 			alert('Falha ao cadastrar pessoa. Tente novamente.');
 		}
