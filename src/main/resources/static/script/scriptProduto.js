@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const nome = document.getElementById("nome").value;
         const pre = document.getElementById("pre").value;
         const desc = document.getElementById("desc").value;
-        const imgUrl = document.getElementById("imgUrl").files[0];
+        const imgUrl = document.getElementById("imgUrl").value;
 
         const formData = new FormData();
         formData.append("nome", nome);
@@ -16,18 +16,18 @@ document.addEventListener("DOMContentLoaded", () => {
         formData.append("imgUrl", imgUrl);
 
         try {
-            const response = await fetch("http://localhost:8080/produto", {
+            fetch("http://localhost:8080/produto", {
                 method: "POST",
                 body: formData
             });
 
-            if (response.ok) {
+            if(response.ok) {
                 alert("Produto Cadastrado com Sucesso!");
             } else {
                 alert("Falha ao Cadastrar o Produto :(");
             }
-        } catch (error) {
-            console.error("Erro ao cadastrar o Produto:", error);
+        	} catch(error) {
+            console.error("Erro ao cadastrar o Produto:",error);
             alert("Erro inesperado ao cadastrar o produto.");
         }
     });
