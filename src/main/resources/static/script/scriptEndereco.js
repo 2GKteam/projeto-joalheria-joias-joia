@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!pessoaId) {
         alert("Pessoa não encontrada. Por favor, cadastre uma pessoa primeiro.");
-        window.location.href = "cadastroPessoa.html";
+        window.location.href = "cliente.html";
         return;
     }
 
