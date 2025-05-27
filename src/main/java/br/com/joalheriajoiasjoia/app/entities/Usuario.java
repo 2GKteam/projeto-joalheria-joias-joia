@@ -8,6 +8,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
@@ -38,6 +40,10 @@ public class Usuario {
 	@Column
 	private String senha;
 	
+	@ManyToOne
+	@JoinColumn(name = "tipo_usuario_id",referencedColumnName = "id_tipo_usuario", nullable = false)
+	private TipoUsuario tipoUsuario;
+	
 	@OneToMany(mappedBy = "usuario")
 	private List<Endereco> enderecos;
 
@@ -47,9 +53,8 @@ public class Usuario {
 	public Usuario() {
 
 	}
-
 	public Usuario(Long idUsuario, String nomeUsuario, String cpf, String email, String telefone,
-			LocalDate dataNascimento, String senha) {
+			LocalDate dataNascimento, String senha, TipoUsuario tipoUsuario, List<Endereco> enderecos) {
 		this.idUsuario = idUsuario;
 		this.nomeUsuario = nomeUsuario;
 		this.cpf = cpf;
@@ -57,63 +62,63 @@ public class Usuario {
 		this.telefone = telefone;
 		this.dataNascimento = dataNascimento;
 		this.senha = senha;
+		this.tipoUsuario = tipoUsuario;
+		this.enderecos = enderecos;
 	}
-
-	// Getters e setters
-
 	public Long getIdUsuario() {
 		return idUsuario;
 	}
-
 	public void setIdUsuario(Long idUsuario) {
 		this.idUsuario = idUsuario;
 	}
-
-	public String getNomeUsario() {
+	public String getNomeUsuario() {
 		return nomeUsuario;
 	}
-
 	public void setNomeUsuario(String nomeUsuario) {
 		this.nomeUsuario = nomeUsuario;
 	}
-
 	public String getCpf() {
 		return cpf;
 	}
-
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
-
 	public String getEmail() {
 		return email;
 	}
-
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
 	public String getTelefone() {
 		return telefone;
 	}
-
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
-
 	public LocalDate getDataNascimento() {
 		return dataNascimento;
 	}
-
 	public void setDataNascimento(LocalDate dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
 	public String getSenha() {
 		return senha;
 	}
-
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
-
+	public TipoUsuario getTipoUsuario() {
+		return tipoUsuario;
+	}
+	public void setTipoUsuario(TipoUsuario tipoUsuario) {
+		this.tipoUsuario = tipoUsuario;
+	}
+	public List<Endereco> getEnderecos() {
+		return enderecos;
+	}
+	public void setEnderecos(List<Endereco> enderecos) {
+		this.enderecos = enderecos;
+	}
+	
+	
 }
