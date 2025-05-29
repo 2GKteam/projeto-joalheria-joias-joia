@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		const senha = document.getElementById("senha").value;
 
 		try {
-			fetch("http://localhost:8080/usuarios", {
+			const response = await fetch("http://localhost:8080/usuarios", {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json"
