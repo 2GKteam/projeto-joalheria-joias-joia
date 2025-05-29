@@ -16,7 +16,9 @@ public class Endereco {
 	// Atributos
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id_endereco;
+	@Column(name = "id_endereco")
+	private Long idEndereco;
+
 
 	@Column
 	private String bairro;
@@ -29,9 +31,6 @@ public class Endereco {
 
 	@Column
 	private String numeroCasa;
-
-	@Column
-	private String estado;
 
 	@Column
 	private String cep;
@@ -54,14 +53,12 @@ public class Endereco {
 	public Endereco() {
 		
 	}
-	public Endereco(Long id_endereco, String bairro, String rua, String cidade, String numeroCasa, String estado,
-			String cep, String complemento, String logadouro, String uf, Usuario usuario) {
-		this.id_endereco = id_endereco;
+	public Endereco(Long id_endereco, String bairro, String rua, String cidade, String numeroCasa, String cep, String complemento, String logadouro, String uf, Usuario usuario) {
+		this.idEndereco = id_endereco;
 		this.bairro = bairro;
 		this.rua = rua;
 		this.cidade = cidade;
 		this.numeroCasa = numeroCasa;
-		this.estado = estado;
 		this.cep = cep;
 		this.complemento = complemento;
 		this.logadouro = logadouro;
@@ -69,10 +66,10 @@ public class Endereco {
 		this.usuario = usuario;
 	}
 	public Long getId_endereco() {
-		return id_endereco;
+		return idEndereco;
 	}
 	public void setId_endereco(Long id_endereco) {
-		this.id_endereco = id_endereco;
+		this.idEndereco = id_endereco;
 	}
 	public String getBairro() {
 		return bairro;
@@ -97,12 +94,6 @@ public class Endereco {
 	}
 	public void setNumeroCasa(String numeroCasa) {
 		this.numeroCasa = numeroCasa;
-	}
-	public String getEstado() {
-		return estado;
-	}
-	public void setEstado(String estado) {
-		this.estado = estado;
 	}
 	public String getCep() {
 		return cep;
