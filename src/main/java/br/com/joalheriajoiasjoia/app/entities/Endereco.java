@@ -1,5 +1,7 @@
 package br.com.joalheriajoiasjoia.app.entities;
 
+
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -39,9 +41,6 @@ public class Endereco {
 	private String complemento;
 	
 	@Column
-	private String logadouro;
-	
-	@Column
 	private String uf;
 	
 	@ManyToOne
@@ -61,7 +60,6 @@ public class Endereco {
 		this.numeroCasa = numeroCasa;
 		this.cep = cep;
 		this.complemento = complemento;
-		this.logadouro = logadouro;
 		this.uf = uf;
 		this.usuario = usuario;
 	}
@@ -106,12 +104,6 @@ public class Endereco {
 	}
 	public void setComplemento(String complemento) {
 		this.complemento = complemento;
-	}
-	public String getLogradouro() {
-		return logadouro;
-	}
-	public void setLogadouro(String logadouro) {
-		this.logadouro = logadouro;
 	}
 	public String getUf() {
 		return uf;
