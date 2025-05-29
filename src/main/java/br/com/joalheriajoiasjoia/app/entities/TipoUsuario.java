@@ -22,8 +22,9 @@ public class TipoUsuario {
     @Column(name = "nome_tipo_usuario", nullable = false)
     private String nomeTipoUsuario;
     
-	@OneToMany(mappedBy = "tipoUsuario")
-	private List<Usuario> usuarios;
+    
+    @OneToMany(mappedBy = "tipoUsuario")
+    private List<Usuario> usuarios;
 
 
     public TipoUsuario() {
