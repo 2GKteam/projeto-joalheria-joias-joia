@@ -55,7 +55,7 @@ public class Endereco {
 		
 	}
 	public Endereco(Long id_endereco, String bairro, String rua, String cidade, String numeroCasa, String estado,
-			String cep, String complemento, String logadouro, String uf, Usuario usuarioId) {
+			String cep, String complemento, String logadouro, String uf, Usuario usuario) {
 		this.id_endereco = id_endereco;
 		this.bairro = bairro;
 		this.rua = rua;
@@ -66,7 +66,7 @@ public class Endereco {
 		this.complemento = complemento;
 		this.logadouro = logadouro;
 		this.uf = uf;
-		this.usuario = usuarioId;
+		this.usuario = usuario;
 	}
 	public Long getId_endereco() {
 		return id_endereco;
@@ -128,12 +128,12 @@ public class Endereco {
 	public void setUf(String uf) {
 		this.uf = uf;
 	}
-	public Usuario getUsuarioId() {
+	public Usuario getUsuario() {
 	    return usuario;
 	}
 
-	public void setUsuarioId(Usuario usuarioId) {
-	    this.usuario = usuarioId;
+	public void setUsuario(Usuario usuario) {
+	    this.usuario = usuario;
 	}
 
 
