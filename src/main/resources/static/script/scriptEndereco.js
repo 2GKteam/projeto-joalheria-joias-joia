@@ -61,7 +61,9 @@ document.addEventListener("DOMContentLoaded", () => {
           numero,
           rua,
           informacoes,
-          bairro
+          bairro,
+            usuario_id: {pessoaId}  
+
         }),
       });
 
