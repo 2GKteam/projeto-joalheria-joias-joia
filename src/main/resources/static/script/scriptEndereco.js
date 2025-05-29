@@ -1,10 +1,9 @@
-document.getElementById("cep").addEventListener("input", async function() {
+document.getElementById("cep").addEventListener("input", async function () {
   const cep = this.value.replace(/\D/g, "");
 
   if (cep.length === 8) {
     try {
-      
-		fetch(`https://viacep.com.br/ws/${cep}/json/`);
+      const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
 
       if (!response.ok) throw new Error("Erro ao buscar CEP");
 
@@ -23,7 +22,8 @@ document.getElementById("cep").addEventListener("input", async function() {
       alert("Erro ao buscar o endereço: " + error.message);
     }
   }
-})
+});
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("cadastroEnderecoForm");
