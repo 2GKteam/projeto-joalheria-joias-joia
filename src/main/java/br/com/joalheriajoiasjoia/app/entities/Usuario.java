@@ -41,7 +41,7 @@ public class Usuario {
 	private String senha;
 	
 	@ManyToOne
-	@JoinColumn(name = "tipo_usuario_id",referencedColumnName = "id_tipo_usuario", nullable = false)
+	@JoinColumn(name = "tipoUsuario", nullable = false)
 	private TipoUsuario tipoUsuario;
 	
 	@OneToMany(mappedBy = "usuario")
