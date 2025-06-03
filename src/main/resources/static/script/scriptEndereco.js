@@ -14,9 +14,12 @@ document.getElementById("cep").addEventListener("input", async function () {
         return;
       }
 
-      document.getElementById("rua").value = dados.logradouro;
       document.getElementById("bairro").value = dados.bairro;
-      document.getElementById("cidade").value = dados.localidade;
+	  document.getElementById("rua").value = dados.rua;
+      document.getElementById("cidade").value = dados.cidade;
+	  document.getElementById("numero").value = dados.numeroCasa;
+	  document.getElementById("cep").value = dados.cep;
+	  document.getElementById("complemento").value = dados.complemento;
       document.getElementById("estado").value = dados.uf;
     } catch (error) {
       alert("Erro ao buscar o endereço: " + error.message);
@@ -43,9 +46,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const cep = document.getElementById("cep").value;
     const estado = document.getElementById("estado").value;
     const cidade = document.getElementById("cidade").value;
-    const numero = document.getElementById("numero").value;
+    const numeroCasa = document.getElementById("numero").value;
     const rua = document.getElementById("rua").value;
-    const informacoes = document.getElementById("informacoes").value;
+    const complemento = document.getElementById("informacoes").value;
     const bairro = document.getElementById("bairro").value;
 
     try {
@@ -56,14 +59,15 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         body: JSON.stringify({
           cep,
-          estado,
+          uf:estado,
           cidade,
-          numero,
+          numeroCasa,
           rua,
-          informacoes,
+          complemento,
           bairro,
-            usuario_id: {pessoaId}  
-
+          usuario:{
+			idUsuario:pessoaId
+		  }
         }),
       });
 

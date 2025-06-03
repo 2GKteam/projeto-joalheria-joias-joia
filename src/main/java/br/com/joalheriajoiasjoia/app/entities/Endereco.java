@@ -21,7 +21,6 @@ public class Endereco {
 	@Column(name = "id_endereco")
 	private Long idEndereco;
 
-
 	@Column
 	private String bairro;
 
