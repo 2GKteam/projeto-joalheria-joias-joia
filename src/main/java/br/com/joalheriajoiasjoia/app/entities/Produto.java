@@ -43,14 +43,19 @@ public class Produto {
 	}
 
 	// Construtores
-	public Produto(Long id_produto, String nomeProduto, Double precoProduto, String descricaoProduto, String imgUrl) {
+	public Produto(Long id_produto, String nomeProduto, Double precoProduto, String descricaoProduto, String imgUrl,
+			CategoriaProduto categoriaProduto, TipoProduto tipoProduto) {
+		super();
 		this.id_produto = id_produto;
 		this.nomeProduto = nomeProduto;
 		this.precoProduto = precoProduto;
 		this.descricaoProduto = descricaoProduto;
 		this.imgUrl = imgUrl;
+		this.categoriaProduto = categoriaProduto;
+		this.tipoProduto = tipoProduto;
 	}
 	// Getters e Setters
+
 	public Long getId_produto() {
 		return id_produto;
 	}
@@ -59,34 +64,52 @@ public class Produto {
 		this.id_produto = id_produto;
 	}
 
-	public String getNome() {
+	public String getNomeProduto() {
 		return nomeProduto;
 	}
 
-	public void setNome(String nome) {
-		this.nomeProduto = nome;
+	public void setNomeProduto(String nomeProduto) {
+		this.nomeProduto = nomeProduto;
 	}
 
-	public Double getPreco() {
+	public Double getPrecoProduto() {
 		return precoProduto;
 	}
 
-	public void setPreco(Double preco) {
-		this.precoProduto = preco;
+	public void setPrecoProduto(Double precoProduto) {
+		this.precoProduto = precoProduto;
 	}
 
-	public String getCor() {
+	public String getDescricaoProduto() {
 		return descricaoProduto;
 	}
 
-	public void setCor(String cor) {
-		this.descricaoProduto = cor;
+	public void setDescricaoProduto(String descricaoProduto) {
+		this.descricaoProduto = descricaoProduto;
 	}
-	
+
 	public String getImgUrl() {
 		return imgUrl;
 	}
-	
-	
 
+	public void setImgUrl(String imgUrl) {
+		this.imgUrl = imgUrl;
+	}
+
+	public CategoriaProduto getCategoriaProduto() {
+		return categoriaProduto;
+	}
+
+	public void setCategoriaProduto(CategoriaProduto categoriaProduto) {
+		this.categoriaProduto = categoriaProduto;
+	}
+
+	public TipoProduto getTipoProduto() {
+		return tipoProduto;
+	}
+
+	public void setTipoProduto(TipoProduto tipoProduto) {
+		this.tipoProduto = tipoProduto;
+	}
+	
 }
