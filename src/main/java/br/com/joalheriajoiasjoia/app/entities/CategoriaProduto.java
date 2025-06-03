@@ -13,13 +13,13 @@ public class CategoriaProduto {
 	//Atributos
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id_categoria;
+	private Long idCategoria;
 
 	@Column
-	private String nome_categoria;
+	private String nomeCategoria;
 	
 	@Column
-	private String descricao_categoria;
+	private String descricaoCategoria;
 
 	//Construtores
 	public CategoriaProduto() {
@@ -27,33 +27,33 @@ public class CategoriaProduto {
 	}
 	
 	public CategoriaProduto(Long id_categoria, String nome, String descricao) {
-		this.id_categoria = id_categoria;
-		this.nome_categoria = nome;
-		this.descricao_categoria = descricao;
+		this.idCategoria = id_categoria;
+		this.nomeCategoria = nome;
+		this.descricaoCategoria = descricao;
 	}
 	//Getters e Setters
 	public Long getId_categoria() {
-		return id_categoria;
+		return idCategoria;
 	}
 
 	public void setId_categoria(Long id_categoria) {
-		this.id_categoria = id_categoria;
+		this.idCategoria = id_categoria;
 	}
 
 	public String getNome() {
-		return nome_categoria;
+		return nomeCategoria;
 	}
 
 	public void setNome(String nome) {
-		this.nome_categoria = nome;
+		this.nomeCategoria = nome;
 	}
 	
 	public String getDescricao() {
-		return descricao_categoria;
+		return descricaoCategoria;
 	}
 	
 	public void setDescricao(String descricao) {
-		this.descricao_categoria = descricao;
+		this.descricaoCategoria = descricao;
 	}
 	
 
