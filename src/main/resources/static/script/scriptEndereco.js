@@ -17,9 +17,9 @@ document.getElementById("cep").addEventListener("input", async function () {
       document.getElementById("bairro").value = dados.bairro;
 	  document.getElementById("rua").value = dados.rua;
       document.getElementById("cidade").value = dados.cidade;
-	  document.getElementById("Número da Casa").value = dados.numeroCasa;
-	  document.getElementById("CEP").value = dados.cep;
-	  document.getElementById("Complemento").value = dados.complemento;
+	  document.getElementById("numero").value = dados.numeroCasa;
+	  document.getElementById("cep").value = dados.cep;
+	  document.getElementById("complemento").value = dados.complemento;
       document.getElementById("estado").value = dados.uf;
     } catch (error) {
       alert("Erro ao buscar o endereço: " + error.message);
