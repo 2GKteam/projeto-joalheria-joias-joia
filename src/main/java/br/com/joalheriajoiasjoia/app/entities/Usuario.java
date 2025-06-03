@@ -53,8 +53,10 @@ public class Usuario {
 	public Usuario() {
 
 	}
+
 	public Usuario(Long idUsuario, String nomeUsuario, String cpf, String email, String telefone,
 			LocalDate dataNascimento, String senha, TipoUsuario tipoUsuario, List<Endereco> enderecos) {
+		super();
 		this.idUsuario = idUsuario;
 		this.nomeUsuario = nomeUsuario;
 		this.cpf = cpf;
@@ -65,60 +67,78 @@ public class Usuario {
 		this.tipoUsuario = tipoUsuario;
 		this.enderecos = enderecos;
 	}
+
 	public Long getIdUsuario() {
 		return idUsuario;
 	}
+
 	public void setIdUsuario(Long idUsuario) {
 		this.idUsuario = idUsuario;
 	}
+
 	public String getNomeUsuario() {
 		return nomeUsuario;
 	}
+
 	public void setNomeUsuario(String nomeUsuario) {
 		this.nomeUsuario = nomeUsuario;
 	}
+
 	public String getCpf() {
 		return cpf;
 	}
+
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
+
 	public String getEmail() {
 		return email;
 	}
+
 	public void setEmail(String email) {
 		this.email = email;
 	}
+
 	public String getTelefone() {
 		return telefone;
 	}
+
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
+
 	public LocalDate getDataNascimento() {
 		return dataNascimento;
 	}
+
 	public void setDataNascimento(LocalDate dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
+
 	public String getSenha() {
 		return senha;
 	}
+
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
+
 	public TipoUsuario getTipoUsuario() {
 		return tipoUsuario;
 	}
+
 	public void setTipoUsuario(TipoUsuario tipoUsuario) {
 		this.tipoUsuario = tipoUsuario;
 	}
+
 	public List<Endereco> getEnderecos() {
 		return enderecos;
 	}
+
 	public void setEnderecos(List<Endereco> enderecos) {
 		this.enderecos = enderecos;
 	}
-	
-	
+
+
 }
