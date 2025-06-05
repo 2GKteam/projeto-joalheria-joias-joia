@@ -8,13 +8,13 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "tb_ornamento")
+@Table(name = "tbOrnamento")
 public class Ornamento {
 
 	//Atributos
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id_ornamento;
+	private Long idOrnamento;
 	
 	@Column
 	private String nome;
@@ -27,18 +27,19 @@ public class Ornamento {
 	}
 
 	//Construtores
-	public Ornamento(Long id_ornamento, String nome, String tipo) {
-		this.id_ornamento = id_ornamento;
+	public Ornamento(Long idOrnamento, String nome, String tipo) {
+		this.idOrnamento = idOrnamento;
 		this.nome = nome;
 		this.tipo = tipo;
 	}
 	//Getters e Setters
-	public Long getId_ornamento() {
-		return id_ornamento;
+
+	public Long getIdOrnamento() {
+		return idOrnamento;
 	}
 
-	public void setId_ornamento(Long id_ornamento) {
-		this.id_ornamento = id_ornamento;
+	public void setIdOrnamento(Long idOrnamento) {
+		this.idOrnamento = idOrnamento;
 	}
 
 	public String getNome() {
@@ -56,6 +57,6 @@ public class Ornamento {
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
-	
+
 	
 }

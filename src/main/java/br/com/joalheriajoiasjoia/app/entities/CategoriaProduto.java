@@ -26,35 +26,34 @@ public class CategoriaProduto {
 		
 	}
 	
-	public CategoriaProduto(Long id_categoria, String nome, String descricao) {
-		this.idCategoria = id_categoria;
+	public CategoriaProduto(Long idCategoria, String nome, String descricao) {
+		this.idCategoria = idCategoria;
 		this.nomeCategoria = nome;
 		this.descricaoCategoria = descricao;
 	}
-	//Getters e Setters
-	public Long getId_categoria() {
+
+	public Long getIdCategoria() {
 		return idCategoria;
 	}
 
-	public void setId_categoria(Long id_categoria) {
-		this.idCategoria = id_categoria;
+	public void setIdCategoria(Long idCategoria) {
+		this.idCategoria = idCategoria;
 	}
 
-	public String getNome() {
+	public String getNomeCategoria() {
 		return nomeCategoria;
 	}
 
-	public void setNome(String nome) {
-		this.nomeCategoria = nome;
+	public void setNomeCategoria(String nomeCategoria) {
+		this.nomeCategoria = nomeCategoria;
 	}
-	
-	public String getDescricao() {
+
+	public String getDescricaoCategoria() {
 		return descricaoCategoria;
 	}
-	
-	public void setDescricao(String descricao) {
-		this.descricaoCategoria = descricao;
+
+	public void setDescricaoCategoria(String descricaoCategoria) {
+		this.descricaoCategoria = descricaoCategoria;
 	}
-	
 
 }

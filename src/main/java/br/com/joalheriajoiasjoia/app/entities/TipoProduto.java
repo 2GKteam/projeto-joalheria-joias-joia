@@ -11,18 +11,18 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "tb_tipoProduto")
+@Table(name = "tbTipoProduto")
 public class TipoProduto {
 	// Atributos
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id_tipoProduto;
+	private Long idTipoProduto;
 
 	@Column
-	private String nome_tipo_produto;
+	private String nomeTipoProduto;
 	
 	@Column
-	private String descricao_produto;
+	private String descricaoProduto;
 	
 	@OneToMany(mappedBy = "tipoProduto")
 	private List<Produto> produtos;
@@ -33,37 +33,36 @@ public class TipoProduto {
 
 	// Construtores
 	
-	public TipoProduto(Long id_tipoProduto, String nome_tipo_produto, String descricao_produto,
+	public TipoProduto(Long idTipoProduto, String nomeTipoProduto, String descricaoProduto,
 			List<Produto> produtos) {
-		this.id_tipoProduto = id_tipoProduto;
-		this.nome_tipo_produto = nome_tipo_produto;
-		this.descricao_produto = descricao_produto;
+		this.idTipoProduto = idTipoProduto;
+		this.nomeTipoProduto = nomeTipoProduto;
+		this.descricaoProduto = descricaoProduto;
 		this.produtos = produtos;
 	}
 
-	// Getters e Setters
-	public Long getId_tipoProduto() {
-		return id_tipoProduto;
+	public Long getIdTipoProduto() {
+		return idTipoProduto;
 	}
 
-	public void setId_tipoProduto(Long id_tipoProduto) {
-		this.id_tipoProduto = id_tipoProduto;
+	public void setIdTipoProduto(Long idTipoProduto) {
+		this.idTipoProduto = idTipoProduto;
 	}
 
-	public String getNome_tipo_produto() {
-		return nome_tipo_produto;
+	public String getNomeTipoProduto() {
+		return nomeTipoProduto;
 	}
 
-	public void setNome_tipo_produto(String nome_tipo_produto) {
-		this.nome_tipo_produto = nome_tipo_produto;
+	public void setNomeTipoProduto(String nomeTipoProduto) {
+		this.nomeTipoProduto = nomeTipoProduto;
 	}
 
-	public String getDescricao_produto() {
-		return descricao_produto;
+	public String getDescricaoProduto() {
+		return descricaoProduto;
 	}
 
-	public void setDescricao_produto(String descricao_produto) {
-		this.descricao_produto = descricao_produto;
+	public void setDescricaoProduto(String descricaoProduto) {
+		this.descricaoProduto = descricaoProduto;
 	}
 
 	public List<Produto> getProdutos() {
@@ -73,5 +72,7 @@ public class TipoProduto {
 	public void setProdutos(List<Produto> produtos) {
 		this.produtos = produtos;
 	}
+
+
 	
 }
