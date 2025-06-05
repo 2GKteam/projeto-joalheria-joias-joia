@@ -14,45 +14,49 @@ import jakarta.persistence.Table;
 @Table(name = "tbTipoUsuario")
 public class TipoUsuario {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idTipoUsuario")
-    private Long idTipoUsuario;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "idTipoUsuario")
+	private Long idTipoUsuario;
 
-    @Column(name = "nomeTipoUsuario", nullable = false)
-    private String nomeTipoUsuario;
-    
-    
-    @OneToMany(mappedBy = "tipoUsuario")
-    private List<Usuario> usuarios;
+	@Column(name = "nomeTipoUsuario", nullable = false)
+	private String nomeTipoUsuario;
 
+	@OneToMany(mappedBy = "tipoUsuario")
+	private List<Usuario> usuarios;
 
-    public TipoUsuario() {
-    	
-    }
+	public TipoUsuario() {
+
+	}
+
 	public TipoUsuario(Long idTipoUsuario, String nomeTipoUsuario, List<Usuario> usuarios) {
 		this.idTipoUsuario = idTipoUsuario;
 		this.nomeTipoUsuario = nomeTipoUsuario;
 		this.usuarios = usuarios;
 	}
+
 	public Long getIdTipoUsuario() {
 		return idTipoUsuario;
 	}
+
 	public void setIdTipoUsuario(Long idTipoUsuario) {
 		this.idTipoUsuario = idTipoUsuario;
 	}
+
 	public String getNomeTipoUsuario() {
 		return nomeTipoUsuario;
 	}
+
 	public void setNomeTipoUsuario(String nomeTipoUsuario) {
 		this.nomeTipoUsuario = nomeTipoUsuario;
 	}
+
 	public List<Usuario> getUsuarios() {
 		return usuarios;
 	}
+
 	public void setUsuarios(List<Usuario> usuarios) {
 		this.usuarios = usuarios;
 	}
-    
-    
+
 }

@@ -12,39 +12,44 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "tbProdutos")
 public class Produto {
-	
-	//Atributos
+
+	// Atributos
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idProduto;
-	
+
 	@Column
 	private String nomeProduto;
-	
+
 	@Column
 	private Double precoProduto;
-	
+
 	@Column
 	private String descricaoProduto;
-	
+
 	@Column
 	private String imgUrl;
-	
+
 	@ManyToOne
 	@JoinColumn(name = "categoriaProduto", nullable = true)
 	private CategoriaProduto categoriaProduto;
-	
+
 	@ManyToOne
-	@JoinColumn(name = "tipoProdutoId",nullable = false)
+	@JoinColumn(name = "tipoProdutoId", nullable = false)
 	private TipoProduto tipoProduto;
-	
+
+	@ManyToOne
+	@JoinColumn(name = "ornamento_id")
+	private Ornamento ornamentoProduto;
+
 	public Produto() {
-		
+
 	}
 
 	// Construtores
+
 	public Produto(Long idProduto, String nomeProduto, Double precoProduto, String descricaoProduto, String imgUrl,
-			CategoriaProduto categoriaProduto, TipoProduto tipoProduto) {
+			CategoriaProduto categoriaProduto, TipoProduto tipoProduto, Ornamento ornamentoProduto) {
 		super();
 		this.idProduto = idProduto;
 		this.nomeProduto = nomeProduto;
@@ -53,7 +58,9 @@ public class Produto {
 		this.imgUrl = imgUrl;
 		this.categoriaProduto = categoriaProduto;
 		this.tipoProduto = tipoProduto;
+		this.ornamentoProduto = ornamentoProduto;
 	}
+
 	// Getters e Setters
 
 	public Long getIdProduto() {
@@ -112,6 +119,12 @@ public class Produto {
 		this.tipoProduto = tipoProduto;
 	}
 
+	public Ornamento getOrnamentoProduto() {
+		return ornamentoProduto;
+	}
 
-	
+	public void setOrnamentoProduto(Ornamento ornamentoProduto) {
+		this.ornamentoProduto = ornamentoProduto;
+	}
+
 }

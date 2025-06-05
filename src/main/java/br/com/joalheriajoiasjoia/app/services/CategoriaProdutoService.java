@@ -13,19 +13,19 @@ public class CategoriaProdutoService {
 
 	@Autowired
 	private CategoriaProdutoRepository categoriaProdutoRepository;
-	
-	public CategoriaProduto saveCategoriaProduto( CategoriaProduto categoriaProduto) {
+
+	public CategoriaProduto saveCategoriaProduto(CategoriaProduto categoriaProduto) {
 		return categoriaProdutoRepository.save(categoriaProduto);
 	}
-	
-	public List<CategoriaProduto> getAllCategoriaProduto(){
+
+	public List<CategoriaProduto> getAllCategoriaProduto() {
 		return categoriaProdutoRepository.findAll();
 	}
-	
-	public CategoriaProduto getCategoriaProdutoById (Long id) {
+
+	public CategoriaProduto getCategoriaProdutoById(Long id) {
 		return categoriaProdutoRepository.findById(id).orElse(null);
 	}
-	
+
 	public void deleteCategoriaProduto(Long id) {
 		categoriaProdutoRepository.deleteById(id);
 	}

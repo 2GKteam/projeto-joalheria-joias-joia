@@ -36,18 +36,16 @@ public class Usuario {
 
 	@Column(name = "dtNascimento", nullable = true, unique = false)
 	private LocalDate dataNascimento;
-	
+
 	@Column
 	private String senha;
-	
+
 	@ManyToOne
 	@JoinColumn(name = "tipoUsuario", nullable = false)
 	private TipoUsuario tipoUsuario;
-	
+
 	@OneToMany(mappedBy = "usuario")
 	private List<Endereco> enderecos;
-
-
 
 	// Construtores
 	public Usuario() {
@@ -139,6 +137,5 @@ public class Usuario {
 	public void setEnderecos(List<Endereco> enderecos) {
 		this.enderecos = enderecos;
 	}
-
 
 }

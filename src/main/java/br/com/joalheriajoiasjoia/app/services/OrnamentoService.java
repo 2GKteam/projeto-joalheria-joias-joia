@@ -13,19 +13,19 @@ public class OrnamentoService {
 
 	@Autowired
 	private OrnamentoRepository ornamentoRepository;
-	
-	public Ornamento saveOrnamento( Ornamento ornamento) {
+
+	public Ornamento saveOrnamento(Ornamento ornamento) {
 		return ornamentoRepository.save(ornamento);
 	}
-	
-	public List<Ornamento> getAllOrnamento(){
+
+	public List<Ornamento> getAllOrnamento() {
 		return ornamentoRepository.findAll();
 	}
-	
-	public Ornamento getOrnamentoById (Long id) {
+
+	public Ornamento getOrnamentoById(Long id) {
 		return ornamentoRepository.findById(id).orElse(null);
 	}
-	
+
 	public void deleteOrnamento(Long id) {
 		ornamentoRepository.deleteById(id);
 	}
