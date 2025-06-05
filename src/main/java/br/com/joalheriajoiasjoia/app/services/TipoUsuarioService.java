@@ -13,19 +13,19 @@ public class TipoUsuarioService {
 
 	@Autowired
 	private TipoUsuarioRepository tipoUsuarioRepository;
-	
-	public TipoUsuario saveTipoUsuario( TipoUsuario tipoUsuario) {
+
+	public TipoUsuario saveTipoUsuario(TipoUsuario tipoUsuario) {
 		return tipoUsuarioRepository.save(tipoUsuario);
 	}
-	
-	public List<TipoUsuario> getAllTipoUsuario(){
+
+	public List<TipoUsuario> getAllTipoUsuario() {
 		return tipoUsuarioRepository.findAll();
 	}
-	
-	public TipoUsuario getTipoUsuarioById (Long id) {
+
+	public TipoUsuario getTipoUsuarioById(Long id) {
 		return tipoUsuarioRepository.findById(id).orElse(null);
 	}
-	
+
 	public void deleteTipoUsuario(Long id) {
 		tipoUsuarioRepository.deleteById(id);
 	}

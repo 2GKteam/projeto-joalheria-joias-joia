@@ -12,34 +12,34 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "tbProdutos")
 public class Produto {
-	
-	//Atributos
+
+	// Atributos
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idProduto;
-	
+
 	@Column
 	private String nomeProduto;
-	
+
 	@Column
 	private Double precoProduto;
-	
+
 	@Column
 	private String descricaoProduto;
-	
+
 	@Column
 	private String imgUrl;
-	
+
 	@ManyToOne
 	@JoinColumn(name = "categoriaProduto", nullable = true)
 	private CategoriaProduto categoriaProduto;
-	
+
 	@ManyToOne
-	@JoinColumn(name = "tipoProdutoId",nullable = false)
+	@JoinColumn(name = "tipoProdutoId", nullable = false)
 	private TipoProduto tipoProduto;
-	
+
 	public Produto() {
-		
+
 	}
 
 	// Construtores
@@ -112,6 +112,4 @@ public class Produto {
 		this.tipoProduto = tipoProduto;
 	}
 
-
-	
 }

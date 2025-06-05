@@ -13,19 +13,19 @@ public class EnderecoService {
 
 	@Autowired
 	private EnderecoRepository enderecoRepository;
-	
-	public Endereco saveEndereco( Endereco endereco) {
+
+	public Endereco saveEndereco(Endereco endereco) {
 		return enderecoRepository.save(endereco);
 	}
-	
-	public List<Endereco> getAllEndereco(){
+
+	public List<Endereco> getAllEndereco() {
 		return enderecoRepository.findAll();
 	}
-	
-	public Endereco getEnderecoById (Long id) {
+
+	public Endereco getEnderecoById(Long id) {
 		return enderecoRepository.findById(id).orElse(null);
 	}
-	
+
 	public void deleteEndereco(Long id) {
 		enderecoRepository.deleteById(id);
 	}

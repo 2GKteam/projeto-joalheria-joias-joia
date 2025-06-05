@@ -10,22 +10,22 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "tb_categoriaProduto")
 public class CategoriaProduto {
-	//Atributos
+	// Atributos
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idCategoria;
 
 	@Column
 	private String nomeCategoria;
-	
+
 	@Column
 	private String descricaoCategoria;
 
-	//Construtores
+	// Construtores
 	public CategoriaProduto() {
-		
+
 	}
-	
+
 	public CategoriaProduto(Long idCategoria, String nome, String descricao) {
 		this.idCategoria = idCategoria;
 		this.nomeCategoria = nome;

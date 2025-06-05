@@ -13,19 +13,19 @@ public class TipoProdutoService {
 
 	@Autowired
 	private TipoProdutoRepository tipoProdutoRepository;
-	
-	public TipoProduto saveTipoProduto( TipoProduto tipoProduto) {
+
+	public TipoProduto saveTipoProduto(TipoProduto tipoProduto) {
 		return tipoProdutoRepository.save(tipoProduto);
 	}
-	
-	public List<TipoProduto> getAlltipoProduto(){
+
+	public List<TipoProduto> getAlltipoProduto() {
 		return tipoProdutoRepository.findAll();
 	}
-	
-	public TipoProduto getTipoProdutoById (Long id) {
+
+	public TipoProduto getTipoProdutoById(Long id) {
 		return tipoProdutoRepository.findById(id).orElse(null);
 	}
-	
+
 	public void deleteTipoProduto(Long id) {
 		tipoProdutoRepository.deleteById(id);
 	}

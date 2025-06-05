@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.joalheriajoiasjoia.app.entities.CategoriaProduto;
 import br.com.joalheriajoiasjoia.app.services.CategoriaProdutoService;
+
 @RestController
 @RequestMapping("/categoria")
 public class CategoriaProdutoController {

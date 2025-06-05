@@ -20,21 +20,20 @@ public class TipoProduto {
 
 	@Column
 	private String nomeTipoProduto;
-	
+
 	@Column
 	private String descricaoProduto;
-	
+
 	@OneToMany(mappedBy = "tipoProduto")
 	private List<Produto> produtos;
-	
+
 	public TipoProduto() {
 
 	}
 
 	// Construtores
-	
-	public TipoProduto(Long idTipoProduto, String nomeTipoProduto, String descricaoProduto,
-			List<Produto> produtos) {
+
+	public TipoProduto(Long idTipoProduto, String nomeTipoProduto, String descricaoProduto, List<Produto> produtos) {
 		this.idTipoProduto = idTipoProduto;
 		this.nomeTipoProduto = nomeTipoProduto;
 		this.descricaoProduto = descricaoProduto;
@@ -73,6 +72,4 @@ public class TipoProduto {
 		this.produtos = produtos;
 	}
 
-
-	
 }

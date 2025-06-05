@@ -36,7 +36,7 @@ public class UsuarioService {
 
 	public Usuario autenticarPessoa(String email, String senha) {
 
-		// 
+		//
 		Usuario pessoa = usuarioRepository.findByEmail(email);
 
 		if (pessoa != null && pessoa.getSenha().equals(senha)) {
