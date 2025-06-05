@@ -31,7 +31,7 @@ public class Produto {
 	private String imgUrl;
 
 	@ManyToOne
-	@JoinColumn(name = "categoriaProduto", nullable = true)
+	@JoinColumn(name = "categoriaProduto", nullable = false)
 	private CategoriaProduto categoriaProduto;
 
 	@ManyToOne
@@ -39,7 +39,7 @@ public class Produto {
 	private TipoProduto tipoProduto;
 
 	@ManyToOne
-	@JoinColumn(name = "ornamento_id")
+	@JoinColumn(name = "ornamentoId", nullable = false)
 	private Ornamento ornamentoProduto;
 
 	public Produto() {
@@ -50,7 +50,6 @@ public class Produto {
 
 	public Produto(Long idProduto, String nomeProduto, Double precoProduto, String descricaoProduto, String imgUrl,
 			CategoriaProduto categoriaProduto, TipoProduto tipoProduto, Ornamento ornamentoProduto) {
-		super();
 		this.idProduto = idProduto;
 		this.nomeProduto = nomeProduto;
 		this.precoProduto = precoProduto;
