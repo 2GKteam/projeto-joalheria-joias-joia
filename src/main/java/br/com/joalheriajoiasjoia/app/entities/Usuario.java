@@ -46,7 +46,7 @@ public class Usuario {
 	@JoinColumn(name = "tipoUsuario", nullable = false)
 	private TipoUsuario tipoUsuario;
 	
-	@JsonIgnoreProperties(ignoreUnknown = true)
+	@JsonIgnoreProperties
 	@OneToMany(mappedBy = "usuario")
 	private List<Endereco> enderecos;
 

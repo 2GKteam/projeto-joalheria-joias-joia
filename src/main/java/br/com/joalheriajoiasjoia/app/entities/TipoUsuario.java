@@ -22,9 +22,6 @@ public class TipoUsuario {
 	@Column(name = "nomeTipoUsuario", nullable = false)
 	private String nomeTipoUsuario;
 
-	@OneToMany(mappedBy = "tipoUsuario")
-	private List<Usuario> usuarios;
-
 	public TipoUsuario() {
 
 	}
@@ -32,7 +29,6 @@ public class TipoUsuario {
 	public TipoUsuario(Long idTipoUsuario, String nomeTipoUsuario, List<Usuario> usuarios) {
 		this.idTipoUsuario = idTipoUsuario;
 		this.nomeTipoUsuario = nomeTipoUsuario;
-		this.usuarios = usuarios;
 	}
 
 	public Long getIdTipoUsuario() {
@@ -49,14 +45,6 @@ public class TipoUsuario {
 
 	public void setNomeTipoUsuario(String nomeTipoUsuario) {
 		this.nomeTipoUsuario = nomeTipoUsuario;
-	}
-
-	public List<Usuario> getUsuarios() {
-		return usuarios;
-	}
-
-	public void setUsuarios(List<Usuario> usuarios) {
-		this.usuarios = usuarios;
 	}
 
 }
