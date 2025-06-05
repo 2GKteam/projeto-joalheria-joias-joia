@@ -11,15 +11,15 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "tb_tipo_usuario")
+@Table(name = "tbTipoUsuario")
 public class TipoUsuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_tipo_usuario")
+    @Column(name = "idTipoUsuario")
     private Long idTipoUsuario;
 
-    @Column(name = "nome_tipo_usuario", nullable = false)
+    @Column(name = "nomeTipoUsuario", nullable = false)
     private String nomeTipoUsuario;
     
     

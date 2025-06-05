@@ -12,13 +12,13 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "tb_endereco")
+@Table(name = "tbEndereco")
 public class Endereco {
 
 	// Atributos
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id_endereco")
+	@Column(name = "idEndereco")
 	private Long idEndereco;
 
 	@Column
@@ -43,7 +43,7 @@ public class Endereco {
 	private String uf;
 	
 	@ManyToOne
-	@JoinColumn(name = "usuario_id", nullable = false)
+	@JoinColumn(name = "usuarioId", nullable = false)
 	private Usuario usuario;
 
 
@@ -51,8 +51,8 @@ public class Endereco {
 	public Endereco() {
 		
 	}
-	public Endereco(Long id_endereco, String bairro, String rua, String cidade, String numeroCasa, String cep, String complemento, String logadouro, String uf, Usuario usuario) {
-		this.idEndereco = id_endereco;
+	public Endereco(Long idEndereco, String bairro, String rua, String cidade, String numeroCasa, String cep, String complemento, String logadouro, String uf, Usuario usuario) {
+		this.idEndereco = idEndereco;
 		this.bairro = bairro;
 		this.rua = rua;
 		this.cidade = cidade;
@@ -62,59 +62,5 @@ public class Endereco {
 		this.uf = uf;
 		this.usuario = usuario;
 	}
-	public Long getId_endereco() {
-		return idEndereco;
-	}
-	public void setId_endereco(Long id_endereco) {
-		this.idEndereco = id_endereco;
-	}
-	public String getBairro() {
-		return bairro;
-	}
-	public void setBairro(String bairro) {
-		this.bairro = bairro;
-	}
-	public String getRua() {
-		return rua;
-	}
-	public void setRua(String rua) {
-		this.rua = rua;
-	}
-	public String getCidade() {
-		return cidade;
-	}
-	public void setCidade(String cidade) {
-		this.cidade = cidade;
-	}
-	public String getNumeroCasa() {
-		return numeroCasa;
-	}
-	public void setNumeroCasa(String numeroCasa) {
-		this.numeroCasa = numeroCasa;
-	}
-	public String getCep() {
-		return cep;
-	}
-	public void setCep(String cep) {
-		this.cep = cep;
-	}
-	public String getComplemento() {
-		return complemento;
-	}
-	public void setComplemento(String complemento) {
-		this.complemento = complemento;
-	}
-	public String getUf() {
-		return uf;
-	}
-	public void setUf(String uf) {
-		this.uf = uf;
-	}
-	public Usuario getUsuario() {
-	    return usuario;
-	}
-
-	public void setUsuario(Usuario usuario) {
-	    this.usuario = usuario;
-	}
+	
 }

@@ -10,13 +10,13 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "tb_produtos")
+@Table(name = "tbProdutos")
 public class Produto {
 	
 	//Atributos
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id_produto;
+	private Long idProduto;
 	
 	@Column
 	private String nomeProduto;
@@ -35,7 +35,7 @@ public class Produto {
 	private CategoriaProduto categoriaProduto;
 	
 	@ManyToOne
-	@JoinColumn(name = "tipo_produto_id",nullable = false)
+	@JoinColumn(name = "tipoProdutoId",nullable = false)
 	private TipoProduto tipoProduto;
 	
 	public Produto() {
@@ -43,10 +43,10 @@ public class Produto {
 	}
 
 	// Construtores
-	public Produto(Long id_produto, String nomeProduto, Double precoProduto, String descricaoProduto, String imgUrl,
+	public Produto(Long idProduto, String nomeProduto, Double precoProduto, String descricaoProduto, String imgUrl,
 			CategoriaProduto categoriaProduto, TipoProduto tipoProduto) {
 		super();
-		this.id_produto = id_produto;
+		this.idProduto = idProduto;
 		this.nomeProduto = nomeProduto;
 		this.precoProduto = precoProduto;
 		this.descricaoProduto = descricaoProduto;
@@ -56,12 +56,12 @@ public class Produto {
 	}
 	// Getters e Setters
 
-	public Long getId_produto() {
-		return id_produto;
+	public Long getIdProduto() {
+		return idProduto;
 	}
 
-	public void setId_produto(Long id_produto) {
-		this.id_produto = id_produto;
+	public void setIdProduto(Long idProduto) {
+		this.idProduto = idProduto;
 	}
 
 	public String getNomeProduto() {
@@ -111,5 +111,7 @@ public class Produto {
 	public void setTipoProduto(TipoProduto tipoProduto) {
 		this.tipoProduto = tipoProduto;
 	}
+
+
 	
 }

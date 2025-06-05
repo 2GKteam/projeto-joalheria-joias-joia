@@ -14,7 +14,7 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "tb_usuario")
+@Table(name = "tbUsuario")
 public class Usuario {
 	// Atributos
 	@Id
@@ -22,7 +22,7 @@ public class Usuario {
 	@Column(name = "idUsuario", nullable = false)
 	private Long idUsuario;
 
-	@Column(name = "nome_usuario", nullable = false, length = 100)
+	@Column(name = "nomeUsuario", nullable = false, length = 100)
 	private String nomeUsuario;
 
 	@Column(name = "cpf", nullable = false, length = 11, unique = true)
@@ -34,7 +34,7 @@ public class Usuario {
 	@Column(name = "telefone", nullable = false, unique = false)
 	private String telefone;
 
-	@Column(name = "dt_nascimento", nullable = true, unique = false)
+	@Column(name = "dtNascimento", nullable = true, unique = false)
 	private LocalDate dataNascimento;
 	
 	@Column
