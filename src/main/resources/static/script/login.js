@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		event.preventDefault();
 
 		const email = document.getElementById('email').value;
-		const cpf = document.getElementById('cpf').value;
 		const senha = document.getElementById('senha').value;
 
 
@@ -16,15 +15,14 @@ document.addEventListener('DOMContentLoaded', () => {
 			},
 			body: JSON.stringify({
 				email: email,
-				senha: senha,
-				cpf: cpf
+				senha: senha
 			})
 		})
 			.then(response => {
 				if (response.ok) {
 					return response.json();
 				} else if (response.status === 401) {
-					throw new Error('Email, CPF ou senha inválidos.');
+					throw new Error('Email ou senha inválidos.');
 				} else {
 					throw new Error('Erro na autenticação.');
 				}
