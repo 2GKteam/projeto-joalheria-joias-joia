@@ -1,10 +1,13 @@
 package br.com.joalheriajoiasjoia.app.entities;
 
+import java.util.List;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -22,16 +25,23 @@ public class Ornamento {
 	@Column
 	private String tipo;
 
+	@OneToMany(mappedBy = "ornamentoProduto")
+	private List<Produto> produtos;
+
 	public Ornamento() {
 
 	}
 
 	// Construtores
-	public Ornamento(Long idOrnamento, String nome, String tipo) {
+
+	public Ornamento(Long idOrnamento, String nome, String tipo, List<Produto> produtos) {
+		super();
 		this.idOrnamento = idOrnamento;
 		this.nome = nome;
 		this.tipo = tipo;
+		this.produtos = produtos;
 	}
+
 	// Getters e Setters
 
 	public Long getIdOrnamento() {
@@ -56,6 +66,14 @@ public class Ornamento {
 
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
+	}
+
+	public List<Produto> getProdutos() {
+		return produtos;
+	}
+
+	public void setProdutos(List<Produto> produtos) {
+		this.produtos = produtos;
 	}
 
 }

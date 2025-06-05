@@ -38,13 +38,18 @@ public class Produto {
 	@JoinColumn(name = "tipoProdutoId", nullable = false)
 	private TipoProduto tipoProduto;
 
+	@ManyToOne
+	@JoinColumn(name = "ornamentoProduto", nullable = false)
+	private Ornamento ornamento;
+
 	public Produto() {
 
 	}
 
 	// Construtores
+
 	public Produto(Long idProduto, String nomeProduto, Double precoProduto, String descricaoProduto, String imgUrl,
-			CategoriaProduto categoriaProduto, TipoProduto tipoProduto) {
+			CategoriaProduto categoriaProduto, TipoProduto tipoProduto, Ornamento ornamento) {
 		super();
 		this.idProduto = idProduto;
 		this.nomeProduto = nomeProduto;
@@ -53,7 +58,9 @@ public class Produto {
 		this.imgUrl = imgUrl;
 		this.categoriaProduto = categoriaProduto;
 		this.tipoProduto = tipoProduto;
+		this.ornamento = ornamento;
 	}
+
 	// Getters e Setters
 
 	public Long getIdProduto() {
@@ -110,6 +117,14 @@ public class Produto {
 
 	public void setTipoProduto(TipoProduto tipoProduto) {
 		this.tipoProduto = tipoProduto;
+	}
+
+	public Ornamento getOrnamento() {
+		return ornamento;
+	}
+
+	public void setOrnamento(Ornamento ornamento) {
+		this.ornamento = ornamento;
 	}
 
 }
