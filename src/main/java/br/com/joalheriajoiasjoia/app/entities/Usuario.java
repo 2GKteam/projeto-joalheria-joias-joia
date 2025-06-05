@@ -3,6 +3,8 @@ package br.com.joalheriajoiasjoia.app.entities;
 import java.time.LocalDate;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -43,7 +45,8 @@ public class Usuario {
 	@ManyToOne
 	@JoinColumn(name = "tipoUsuario", nullable = false)
 	private TipoUsuario tipoUsuario;
-
+	
+	@JsonIgnoreProperties(ignoreUnknown = true)
 	@OneToMany(mappedBy = "usuario")
 	private List<Endereco> enderecos;
 
