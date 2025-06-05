@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("Erro ao cadastrar o Endereço");
       } else {
         alert("Endereço cadastrado com sucesso!");  // Aqui mostramos a mensagem de sucesso
-        window.location.href = "./index.html";
+        window.location.href = "../index.html";
       }
     } catch (error) {
       alert(error.message);
