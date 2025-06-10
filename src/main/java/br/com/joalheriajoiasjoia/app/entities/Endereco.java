@@ -5,8 +5,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -40,16 +38,12 @@ public class Endereco {
 	@Column
 	private String uf;
 
-	@ManyToOne
-	@JoinColumn(name = "usuarioId", nullable = false)
-	private Usuario usuario;
-
 	public Endereco() {
 
 	}
 
 	public Endereco(Long idEndereco, String bairro, String rua, String cidade, String numero, String cep,
-			String complemento, String logadouro, String uf, Usuario usuario) {
+			String complemento, String logadouro, String uf) {
 		this.idEndereco = idEndereco;
 		this.bairro = bairro;
 		this.rua = rua;
@@ -58,7 +52,6 @@ public class Endereco {
 		this.cep = cep;
 		this.complemento = complemento;
 		this.uf = uf;
-		this.usuario = usuario;
 	}
 
 	public Long getIdEndereco() {
@@ -124,13 +117,4 @@ public class Endereco {
 	public void setUf(String uf) {
 		this.uf = uf;
 	}
-
-	public Usuario getUsuario() {
-		return usuario;
-	}
-
-	public void setUsuario(Usuario usuario) {
-		this.usuario = usuario;
-	}
-
 }
