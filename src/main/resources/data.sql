@@ -18,4 +18,7 @@ INSERT IGNORE INTO tb_tipo_produto (id_tipo_produto, nome_tipo_produto, descrica
 (3, 'Bijuteria', 'É biju mas é de rico');
 
 insert ignore into tb_ornamento (id_ornamento, nome, tipo) values
-(1, 'Rubi', )
+(1, 'Rubi', 'r'),
+(2, 'Diamante', 'd'),
+(3, 'Esmeralda', 'e'),
+(4, 'Perola', 'p')
