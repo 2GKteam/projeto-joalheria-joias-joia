@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const desc = document.getElementById("desc").value;
         const imgUrl = document.getElementById("imgUrl").value;
 
+		
         try {
 			const response = await fetch("http://localhost:8080/produto", {
                 method: "POST",
@@ -32,5 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
         	} catch(error) {
             console.error("Erro ao cadastrar o Produto:",error);
         }
+		
     });
 });
