@@ -40,6 +40,7 @@ public class Usuario {
 	@ManyToOne
 	@JoinColumn(name = "tipoUsuario", nullable = false)
 	private TipoUsuario tipoUsuario;
+	
 
 	// Construtores
 	public Usuario() {

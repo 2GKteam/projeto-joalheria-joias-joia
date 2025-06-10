@@ -39,7 +39,7 @@ public class Produto {
 	private TipoProduto tipoProduto;
 
 	@ManyToOne
-	@JoinColumn(name = "ornamentoId", nullable = false)
+	@JoinColumn(name = "ornamentoId", nullable = true)
 	private Ornamento ornamentoProduto;
 
 	public Produto() {

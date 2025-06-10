@@ -38,12 +38,13 @@ public class Endereco {
 	@Column
 	private String uf;
 
+
 	public Endereco() {
 
 	}
 
 	public Endereco(Long idEndereco, String bairro, String rua, String cidade, String numero, String cep,
-			String complemento, String logadouro, String uf) {
+			String complemento, String uf) {
 		this.idEndereco = idEndereco;
 		this.bairro = bairro;
 		this.rua = rua;
