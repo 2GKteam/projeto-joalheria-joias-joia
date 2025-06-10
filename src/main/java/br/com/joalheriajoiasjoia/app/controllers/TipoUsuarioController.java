@@ -16,7 +16,7 @@ import br.com.joalheriajoiasjoia.app.entities.TipoUsuario;
 import br.com.joalheriajoiasjoia.app.services.TipoUsuarioService;
 
 @RestController
-@RequestMapping("/tipousuario")
+@RequestMapping("/tipoUsuario")
 public class TipoUsuarioController {
 
 	@Autowired

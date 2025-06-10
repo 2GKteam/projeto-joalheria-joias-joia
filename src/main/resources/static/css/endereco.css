@@ -65,3 +65,12 @@ h1 {
       color: #a81f34;
       transition:all linear 0.3;
     }
+
+    nav .logo a{
+      font-family: 'Poppins', sans-serif;
+      text-decoration: none;
+      color:  #2b0a04;
+      font-size: 35px;
+      font-weight: 600;
+      margin-left: 5%;
+   }
