@@ -58,3 +58,12 @@ button {
   cursor: pointer;
   padding: 15px;
 }
+
+nav .logo a{
+      font-family: 'Poppins', sans-serif;
+      text-decoration: none;
+      color:  #2b0a04;
+      font-size: 35px;
+      font-weight: 600;
+      margin-left: 5%;
+   }
