@@ -22,9 +22,6 @@ public class Ornamento {
 	@Column
 	private String nome;
 
-	@Column
-	private String tipo;
-
 	@OneToMany(mappedBy = "ornamentoProduto")
 	private List<Produto> produtos;
 
@@ -38,7 +35,6 @@ public class Ornamento {
 		super();
 		this.idOrnamento = idOrnamento;
 		this.nome = nome;
-		this.tipo = tipo;
 		this.produtos = produtos;
 	}
 
@@ -58,14 +54,6 @@ public class Ornamento {
 
 	public void setNome(String nome) {
 		this.nome = nome;
-	}
-
-	public String getTipo() {
-		return tipo;
-	}
-
-	public void setTipo(String tipo) {
-		this.tipo = tipo;
 	}
 
 	public List<Produto> getProdutos() {
