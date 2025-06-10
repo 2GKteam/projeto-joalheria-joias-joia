@@ -30,17 +30,13 @@ document.addEventListener("DOMContentLoaded", () => {
 				}),
 			});
 
+			
+			
 			if(!response.ok) {
 				throw new Error('Erro ao cadastrar usuário');
 			}
-
-			const data = await response.json();
-
-			alert('Usuário cadastrado com sucesso!\nNomeUsuario: ' + data.nomeUsuario);
-
-			localStorage.setItem('pessoaId',data.idUsuario); // Verifique o nome correto da propriedade
 			window.location.href='./endereco.html';
-
+			
 			} catch(error){
 		      console.error('Erro no cadastro:', error);
 		                  alert('Falha ao cadastrar usuário. Tente novamente.');

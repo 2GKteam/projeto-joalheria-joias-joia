@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-	<link rel="stylesheet" href="./css/cadastroproduto.css">
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Cadastro Produto</title>
+  <meta charset="UTF-8">
+  <title>Produto</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/cadastroproduto.css">
 </head>
 
 <body>
 
+<<<<<<< HEAD
 	<nav>
         <div class="logo">
             <a href="index.html"> JLD </a>
@@ -20,29 +20,50 @@
 
 	<form id="cadastroProdutoForm">
 
+=======
+  <div class="produto-container">
+    <form id="cadastroProdutoForm">
+      <div class="produto-img">
+>>>>>>> 6e09098 (Tentativa de buscar a pag por id de acordo com cada produto)
 		<label for="imgUrl">Insira a imagem do seu Produto:</label>
 		<input type="text" id="imgUrl" name="imgUrl" accept="image/*" required>
-		
-		<label for="nome">Nome:</label>
-		<input type="text" name="nome" id="nome" required autofocus><br>
-		
-		<label for="pre">Preço:</label>
-		<input type="text" name="pre" id="pre" required><br>
-		
-		<label for="desc">Descrição:</label>
-		<input type="text" name="desc" id="desc" required><br>
-		
-		<button type="submit">Cadastrar</button>
+      </div>
 
-		</select>
-		
-		<script src="./script/scriptProduto.js"></script>
+      <div class="produto-info">
+        <label for="nome">Nome do Produto:</label>
+        <input type="text" id="nome" name="nome" required>
 
-	</form>
+        <label for="desc">Descrição:</label>
+        <textarea id="desc" name="desc" required></textarea>
 
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+        <label for="pre">Preço:</label>
+        <input type="number" id="pre" name="pre" step="0.01" required>
 
- 
+        <label for="categoriaProduto">Categoria:</label>
+        <select id="categoriaProduto" name="categoriaProduto" required>
+          <option value="1">Anéis</option>
+          <option value="2">Colares</option>
+          <option value="3">Brincos</option>
+          <option value="4">Pulseiras</option>
+          <option value="5">Relógios</option>
+        </select>
+
+        <label for="tipoProduto">Tipo:</label>
+        <select id="tipoProduto" name="tipoProduto" required>
+          <option value="1">Ouro</option>
+          <option value="2">Prata</option>
+          <option value="3">Bijuteria</option>
+        </select>
+
+        <label for="ornamentoProduto">Ornamento:</label>
+		<input type="text" id="ornamentoProduto" name="ornamentoProduto" required>
+
+        <button type="submit">Cadastrar</button>
+      </div>
+    </form>
+  </div>
+  
+
+  <script src="script/scriptProduto.js"></script>
 </body>
-
 </html>

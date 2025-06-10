@@ -91,7 +91,7 @@
         </div>
 
         <div class="div2">
-            <div class="produto">
+            <div class="produto" data-id="1">
                 <p>Brinco Luxe R$ 220,00
                 </p>
                 <div class="imagem-produto">
@@ -102,7 +102,7 @@
         </div>
 
         <div class="div3">
-            <div class="produto">
+            <div class="produto" data-id="2">
                 <p>Brinco de Cristais Rosa e Roxo R$ 275,00</p>
                 <div class="imagem-produto">
                     <img src="img/BrincoCristaisRosaRoxo.webp" alt="Joia 2" class="imagem-original">
@@ -112,7 +112,7 @@
         </div>
 
         <div class="div4">
-            <div class="produto">
+            <div class="produto" data-id="3">
                 <p>Brinco Róse R$ 295,00</p>
                 <div class="imagem-produto">
                     <img src="img/ArgolaRose.webp" alt="Joia 3" class="imagem-original">
@@ -129,7 +129,7 @@
         </div>
 
         <div class="div6">
-            <div class="produto">
+            <div class="produto" data-id="4">
                 <p>Pulseira de Estrela(Ouro) R$ 210,00
                 </p>
                 <div class="imagem-produto">
@@ -140,7 +140,7 @@
         </div>
 
         <div class="div7">
-            <div class="produto">
+            <div class="produto" data-id="5">
                 <p>Pulseira de Estrela(Prata) R$ 195,00</p>
                 <div class="imagem-produto">
                     <img src="img/PulseiraStar.png" alt="Joia 1" class="imagem-original">
@@ -150,7 +150,7 @@
         </div>
 
         <div class="div8">
-            <div class="produto">
+            <div class="produto" data-id="6">
                 <p>Pulseira Simples R$ 135,90</p>
                 <div class="imagem-produto">
                     <img src="img/pulseiraInox.png" alt="Joia 1" class="imagem-original">
@@ -167,7 +167,7 @@
         </div>
 
         <div class="div10">
-            <div class="produto">
+            <div class="produto" data-id="7">
                 <p>Colar Estrela R$185,90</p>
                 <div class="imagem-produto">
                     <img src="img/ColarEstrela.png" alt="Joia 1" class="imagem-original">
@@ -177,7 +177,7 @@
         </div>
 
         <div class="div11">
-            <div class="produto">
+            <div class="produto" data-id="8">
                 <p>Colar Gota Pedra Rosa R$245,00</p>
                 <div class="imagem-produto">
                     <img src="img/ColarGota.jpg" alt="Joia 2" class="imagem-original">
@@ -187,7 +187,7 @@
         </div>
 
         <div class="div12">
-            <div class="produto">
+            <div class="produto" data-id="9">
                 <p>Colar de Cristal R$180,50</p>
                 <div class="imagem-produto">
                     <img src="img/ColarCalcedonia.jpg" alt="Joia 3" class="imagem-original">
@@ -205,7 +205,7 @@
         </div>
 
         <div class="div14">
-            <div class="produto">
+            <div class="produto" data-id="10">
                 <p>Relógio de Ouro Simples R$ 1200,00
                 </p>
                 <div class="imagem-produto">
@@ -216,7 +216,7 @@
         </div>
 
         <div class="div15">
-            <div class="produto">
+            <div class="produto" data-id="11">
                 <p>Relógio de Prata R$ 800,00</p>
                 <div class="imagem-produto">
                     <img src="img/relogioPrata1.webp" alt="Joia 2" class="imagem-original">
@@ -226,7 +226,7 @@
         </div>
 
         <div class="div16">
-            <div class="produto">
+            <div class="produto" data-id="12">
                 <p>Relógio de Aço-Inoxidável R$ 600,00</p>
                 <div class="imagem-produto">
                     <img src="img/relogioInox1.webp" alt="Joia 3" class="imagem-original">
@@ -243,7 +243,7 @@
         </div>
 
         <div class="div18">
-            <div class="produto">
+            <div class="produto" data-id="13">
                 <p>Anel Pedra Safira R$290,00
                 </p>
                 <div class="imagem-produto">
@@ -254,7 +254,7 @@
         </div>
 
         <div class="div19">
-            <div class="produto">
+            <div class="produto" data-id="14">
                 <p>Anel de Gota R$ 130,00</p>
                 <div class="imagem-produto">
                     <img src="img/anel.webp" alt="Joia 2" class="imagem-original">
@@ -264,7 +264,7 @@
         </div>
 
         <div class="div20">
-            <div class="produto">
+            <div class="produto" data-id="15">
                 <p>Anel de Peróla R$ 199,00</p>
                 <div class="imagem-produto">
                     <img src="img/AnelPerola.webp" alt="Joia 3" class="imagem-original">
@@ -272,10 +272,34 @@
                 </div>
             </div>
         </div>
+<<<<<<< HEAD
     </div>
         <div class="rodape">
             <p>&copy; Joalheria Lumière Dorée.</p>
         </div>
+=======
+		
+
+        <div class="rodape">
+            <p>&copy; Joalheria Lumière Dorée.</p>
+        </div>
+    </div>
+
+	<script>
+	  document.addEventListener("DOMContentLoaded", () => {
+	    const produtos = document.querySelectorAll(".produto");
+
+	    produtos.forEach(produto => {
+	      produto.addEventListener("click", () => {
+	        const id = produto.getAttribute("data-id");
+	        if (id) {
+	          window.location.href = `produto.html?id=${id}`;
+	        }
+	      });
+	    });
+	  });
+	</script>
+>>>>>>> 6e09098 (Tentativa de buscar a pag por id de acordo com cada produto)
 </body>
 
 </html>
