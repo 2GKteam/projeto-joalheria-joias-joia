@@ -44,7 +44,8 @@ public class Usuario {
 	@JoinColumn(name = "tipoUsuario", nullable = false)
 	private TipoUsuario tipoUsuario;
 
-	@OneToMany(mappedBy = "usuario")
+	@OneToMany
+	@JoinColumn(name = "endereco", nullable = false)
 	private List<Endereco> enderecos;
 
 	// Construtores
