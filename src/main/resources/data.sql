@@ -24,7 +24,7 @@ insert ignore into tb_ornamento (id_ornamento, nome) values
 (4, 'Perola'),
 (5, 'Nenhum');
 
-INSERT INTO tb_produto (id_produto, descricao_produto, img_url, nome_produto, preco_produto, categoria_produto, ornamento_id, tipo_produto_id) VALUES 
+INSERT IGNORE INTO tb_produto (id_produto, descricao_produto, img_url, nome_produto, preco_produto, categoria_produto, ornamento_id, tipo_produto_id) VALUES 
 (1, 'Anel de ouro com rubi luxuoso e acabamento refinado', 'https://www.google.com/imgres?q=anel%20de%20ouro%20com%20rubi&imgurl=https%3A%2F%2Flojavivara.vtexassets.com%2Farquivos%2Fids%2F853564%2FAnel-Cores-em-Ouro-Amarelo-18k-com-Rubi-e-Diamantes-14013_1_set.jpg%3Fv%3D638490522488130000&imgrefurl=https%3A%2F%2Fwww.vivara.com.br%2Fanel-cores-em-ouro-amarelo-18k-com-rubi-e-diamantes-an00052568%2Fp&docid=TcNclTGvzCft3M&tbnid=3zT5cGW9FyNV2M&vet=12ahUKEwi3vrPrleeNAxW8ppUCHcr3IDYQM3oECGYQAA..i&w=1000&h=1000&hcb=2&ved=2ahUKEwi3vrPrleeNAxW8ppUCHcr3IDYQM3oECGYQAA', 'Anel Rubi Luxo', 350.00, 1, 1, 1),
 (2, 'Colar elegante de prata com pérola natural', 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.shopdaspedras.com.br%2Fjoias%2Fcolares-e-correntes%2Fcolares-perolas-naturais-cultivadas%2Fcolar-perola-natural-cultivada-arroz-branca-extra-6x8mm-04023&psig=AOvVaw2akExw4ER0tbkx1AwafKF9&ust=1749656219847000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJDI2tyW540DFQAAAAAdAAAAABAd', 'Colar Pérola Elegante', 250.00, 2, 4, 2),
 (3, 'Brinco de bijuteria com esmeralda sintética e design moderno', 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.azuljoias.com.br%2Fbrinco-gota-esmeralda%2F&psig=AOvVaw3V5b0MbTsY8egpTjjRfbn4&ust=1749656292956000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJCloI-X540DFQAAAAAdAAAAABAe', 'Brinco Esmeralda Chic', 60.00, 3, 3, 3),
@@ -45,3 +45,5 @@ INSERT INTO tb_produto (id_produto, descricao_produto, img_url, nome_produto, pr
 (18, 'Brinco de ouro com diamante central de destaque', 'https://lojavivara.vtexassets.com/arquivos/ids/895906/Brinco-em-Ouro-Branco-18k-com-Diamante-de-Laboratorio-2-ct-103291_2_set.jpg?v=638690189569400000', 'Brinco Diamante Premium', 620.00, 3, 2, 1),
 (19, 'Pulseira de prata com detalhes vazados e estilo moderno', 'https://images.tcdn.com.br/img/img_prod/463054/pulseira_de_berloques_prata_925_coracao_vazada_5965_1_76b4d4f810a09b551e3a706231b6d52b_20240621144805.jpg', 'Pulseira Vazado Prata', 230.00, 4, 4, 2),
 (20, 'Relógio mais desejado do momento', 'https://www.infomoney.com.br/wp-content/uploads/2025/01/Captura-de-tela-2025-01-02-132150.png?quality=70', 'Relógio Premium', 999.99, 5, 1, 2);
+
+
