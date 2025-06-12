@@ -42,3 +42,7 @@ body {
 		button:hover {
 			background-color:#e28374;
 		}
+
+		a, a:hover{
+			text-decoration: none;
+		}
