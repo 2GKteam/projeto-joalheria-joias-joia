@@ -39,6 +39,10 @@ public class Endereco {
 
 	@Column
 	private String uf;
+	
+	@ManyToOne
+	@JoinColumn(name = "Usuario", nullable = false)
+	private Usuario usuarios;
 
 	public Endereco() {
 
@@ -54,6 +58,7 @@ public class Endereco {
 		this.cep = cep;
 		this.complemento = complemento;
 		this.uf = uf;
+		this.usuarios = usuarios;
 	}
 
 	public Long getIdEndereco() {
@@ -119,4 +124,14 @@ public class Endereco {
 	public void setUf(String uf) {
 		this.uf = uf;
 	}
+
+	public Usuario getUsuarios() {
+		return usuarios;
+	}
+
+	public void setUsuarios(Usuario usuarios) {
+		this.usuarios = usuarios;
+	}
+	
+	
 }
