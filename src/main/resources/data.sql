@@ -24,6 +24,7 @@ insert ignore into tb_ornamento (id_ornamento, nome) values
 (4, 'Perola'),
 (5, 'Nenhum');
 
+<<<<<<< HEAD
 INSERT IGNORE INTO tb_produto (id_produto, descricao_produto, img_url, nome_produto, preco_produto, categoria_produto, ornamento_id, tipo_produto_id) VALUES 
 (1, 'Anel de ouro com rubi luxuoso e acabamento refinado', 'https://www.google.com/imgres?q=anel%20de%20ouro%20com%20rubi&imgurl=https%3A%2F%2Flojavivara.vtexassets.com%2Farquivos%2Fids%2F853564%2FAnel-Cores-em-Ouro-Amarelo-18k-com-Rubi-e-Diamantes-14013_1_set.jpg%3Fv%3D638490522488130000&imgrefurl=https%3A%2F%2Fwww.vivara.com.br%2Fanel-cores-em-ouro-amarelo-18k-com-rubi-e-diamantes-an00052568%2Fp&docid=TcNclTGvzCft3M&tbnid=3zT5cGW9FyNV2M&vet=12ahUKEwi3vrPrleeNAxW8ppUCHcr3IDYQM3oECGYQAA..i&w=1000&h=1000&hcb=2&ved=2ahUKEwi3vrPrleeNAxW8ppUCHcr3IDYQM3oECGYQAA', 'Anel Rubi Luxo', 350.00, 1, 1, 1),
 (2, 'Colar elegante de prata com pérola natural', 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.shopdaspedras.com.br%2Fjoias%2Fcolares-e-correntes%2Fcolares-perolas-naturais-cultivadas%2Fcolar-perola-natural-cultivada-arroz-branca-extra-6x8mm-04023&psig=AOvVaw2akExw4ER0tbkx1AwafKF9&ust=1749656219847000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJDI2tyW540DFQAAAAAdAAAAABAd', 'Colar Pérola Elegante', 250.00, 2, 4, 2),
@@ -47,3 +48,26 @@ INSERT IGNORE INTO tb_produto (id_produto, descricao_produto, img_url, nome_prod
 (20, 'Relógio mais desejado do momento', 'https://www.infomoney.com.br/wp-content/uploads/2025/01/Captura-de-tela-2025-01-02-132150.png?quality=70', 'Relógio Premium', 999.99, 5, 1, 2);
 
 
+=======
+INSERT INTO tb_produtos (id_produto, descricao_produto, img_url, nome_produto, preco_produto, categoria_produto, ornamento_id, tipo_produto_id) VALUES 
+(1, 'Anel de ouro com rubi luxuoso e acabamento refinado','https://n9.cl/eyd72', 'Anel Rubi Luxo', 350.00, 1, 1, 1),
+(2, 'Colar elegante de prata com pérola natural', 'https://n9.cl/0enwh', 'Colar Pérola Elegante', 250.00, 2, 4, 2),
+(3, 'Brinco de bijuteria com esmeralda sintética e design moderno', 'https://n9.cl/wtk519', 'Brinco Esmeralda Chic', 60.00, 3, 3, 3),
+(4, 'Pulseira de ouro adornada com diamante clássico', 'https://n9.cl/atwn3', 'Pulseira Diamante Clássica', 480.00, 4, 2, 1),
+(5, 'Relógio moderno com detalhe em prata e pulseira sofisticada', 'https://n9.cl/pwumzl', 'Relógio Prata Design', 700.00, 5, 4, 2),
+(6, 'Anel refinado de prata com pérola central', 'https://n9.cl/8r51m', 'Anel Pérola Prata', 190.00, 1, 4, 2),
+(7, 'Colar de bijuteria com pingente rubi fashion', 'https://n9.cl/oh7sk', 'Colar Rubi Fashion', 45.00, 2, 1, 3),
+(8, 'Brinco de ouro com esmeralda verdadeira e acabamento premium', 'https://n9.cl/mg95c', 'Brinco Esmeralda Real', 420.00, 3, 3, 1),
+(9, 'Pulseira de prata com acabamento fino e design minimalista', 'https://n9.cl/3sf7z', 'Pulseira Prata Slim', 210.00, 4, 4, 2),
+(10, 'Relógio digital minimalista', 'https://n9.cl/bcrdu', 'Relógio digital simples', 99.00, 5, 4, 3),
+(11, 'Anel de bijuteria com detalhe em esmeralda', 'https://n9.cl/i8fjn', 'Anel Biju Esmeralda', 39.90, 1, 3, 3),
+(12, 'Colar de ouro com pingente de rubi luxuoso', 'https://n9.cl/mzo8c', 'Colar Rubi Luxuoso', 580.00, 2, 1, 1),
+(13, 'Brinco de prata com pérola natural e estilo clássico', 'https://n9.cl/jndpk1', 'Brinco Pérola Clássico', 265.00, 3, 4, 2),
+(14, 'Pulseira de bijuteria com detalhe brilhante simulando diamante', 'https://n9.cl/pmmth', 'Pulseira Brilho Fashion', 55.00, 4, 2, 3),
+(15, 'Relógio clássico de ouro com visor analógico', 'https://n9.cl/78cqbx', 'Relógio Ouro Clássico', 900.00, 5, 1, 1),
+(16, 'Anel de prata com entalhes elegantes e acabamento polido', 'https://n9.cl/638svu', 'Anel Entalhado Prata', 180.00, 1, 2, 2),
+(17, 'Colar de bijuteria com esferas brilhantes e corrente delicada', 'https://n9.cl/fkj9g', 'Colar Esferas Brilho', 35.00, 2, 4, 3),
+(18, 'Brinco de ouro com diamante central de destaque', 'https://n9.cl/fwvq8', 'Brinco Diamante Premium', 620.00, 3, 2, 1),
+(19, 'Pulseira de prata com detalhes vazados e estilo moderno', 'https://n9.cl/vi952', 'Pulseira Vazado Prata', 230.00, 4, 4, 2),
+(20, 'Relógio mais desejado do momento', 'https://n9.cl/8zpsm', 'Relógio Premium', 999.99, 5, 1, 2);
+>>>>>>> f7b01cfcf28c0174c1dddbaf849d68dc9f8c3aae
