@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		const ornamentoProduto = document.getElementById("ornamentoProduto").value
 
 
-		// Envia os dados para o backend usando fetch		
+		// Envia os dados para o backend usando fetch
         fetch("http://localhost:8080/produto", {
                 method: "POST",
                 headers: {
@@ -28,9 +28,15 @@ document.addEventListener("DOMContentLoaded", function() {
 					pre, 
 					desc,
 					imgUrl,
-					categoriaProduto,
-					tipoProduto,
-					ornamentoProduto
+					categoriaProduto: {
+						idCategoria: 1
+					},
+					tipoProduto: {
+						idTipoProduto: 1
+					},
+					ornamentoProduto:{
+						idOrnamento:1
+					}
 				})
             })
 			.then(response => {
