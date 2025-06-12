@@ -1,8 +1,6 @@
 package br.com.joalheriajoiasjoia.app.entities;
 
 import java.time.LocalDate;
-import java.util.List;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -10,7 +8,6 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -44,17 +41,13 @@ public class Usuario {
 	@JoinColumn(name = "tipoUsuario", nullable = false)
 	private TipoUsuario tipoUsuario;
 
-	@OneToMany
-	@JoinColumn(name = "endereco", nullable = false)
-	private List<Endereco> enderecos;
-
 	// Construtores
 	public Usuario() {
 
 	}
 
 	public Usuario(Long idUsuario, String nomeUsuario, String cpf, String email, String telefone,
-			LocalDate dataNascimento, String senha, TipoUsuario tipoUsuario, List<Endereco> enderecos) {
+			LocalDate dataNascimento, String senha, TipoUsuario tipoUsuario) {
 		this.idUsuario = idUsuario;
 		this.nomeUsuario = nomeUsuario;
 		this.cpf = cpf;
@@ -63,7 +56,7 @@ public class Usuario {
 		this.dataNascimento = dataNascimento;
 		this.senha = senha;
 		this.tipoUsuario = tipoUsuario;
-		this.enderecos = enderecos;
+
 	}
 
 	public Long getIdUsuario() {
@@ -130,13 +123,4 @@ public class Usuario {
 		this.tipoUsuario = tipoUsuario;
 	}
 
-	public List<Endereco> getEnderecos() {
-		return enderecos;
-	}
-
-	public void setEnderecos(List<Endereco> enderecos) {
-		this.enderecos = enderecos;
-	}
-	
-	
 }

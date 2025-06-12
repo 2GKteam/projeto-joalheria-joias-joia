@@ -29,8 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
 					}
 				}),
 			});
-
-			
 			
 			if(!response.ok) {
 				throw new Error('Erro ao cadastrar usuário');
