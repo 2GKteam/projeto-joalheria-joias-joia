@@ -20,7 +20,8 @@ document.getElementById("cep").addEventListener("input", async function () {
       document.getElementById("cep").value = dados.cep;
       document.getElementById("complemento").value = dados.complemento;
       document.getElementById("estado").value = dados.estado;
-    } catch (error) {
+    }
+	 catch (error) {
       alert("Erro ao buscar o endereço: " + error.message);
     }
   }

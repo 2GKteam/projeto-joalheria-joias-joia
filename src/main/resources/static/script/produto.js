@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const urlParams = new URLSearchParams(window.location.search);
     const produtoId = urlParams.get("id");
-	
-	
 
     if (produtoId) {
         fetch(`http://localhost:8080/produto/${produtoId}`)
@@ -18,11 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.getElementById("produto-descricao").textContent = produto.descricaoProduto;
                 document.getElementById("produto-preco").textContent = `R$ ${produto.precoProduto.toFixed(2)}`;
             })
-            .catch(error => {
-                console.error("Erro ao carregar produto:", error);
-                alert("Erro ao carregar informações do produto.");
-            });
-			
-			
+			.catch(error => {
+			               console.error("Erro ao carregar produto:", error);
+			               alert("Erro ao carregar informações do produto.");
+			           });
     }
 });
