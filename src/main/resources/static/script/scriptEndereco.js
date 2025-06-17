@@ -30,15 +30,6 @@ document.getElementById("cep").addEventListener("input", async function () {
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("cadastroEnderecoForm");
 
-  // Busca o ID da pessoa armazenado
-    const pessoaId = localStorage.getItem('pessoaId');
-
-    if (!pessoaId) {
-        alert("Pessoa não encontrada. Por favor, cadastre uma pessoa primeiro.");
-        window.location.href = "cliente.html";
-        return;
-    }
-
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
@@ -64,9 +55,6 @@ document.addEventListener("DOMContentLoaded", () => {
           rua,
           complemento,
           bairro,
-          usuario:{
-            idUsuario:pessoaId
-          }
         }),
       });
 
@@ -74,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("Erro ao cadastrar o Endereço");
       } else {
         alert("Endereço cadastrado com sucesso!");  // Aqui mostramos a mensagem de sucesso
-        window.location.href = "../index.html";
+        window.location.href = "./index.html";
       }
     } catch (error) {
       alert(error.message);

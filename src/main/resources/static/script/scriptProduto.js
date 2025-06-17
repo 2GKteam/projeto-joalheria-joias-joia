@@ -12,10 +12,6 @@ document.addEventListener("DOMContentLoaded", function() {
         const pre = document.getElementById("pre").value;
         const desc = document.getElementById("desc").value;
         const imgUrl = document.getElementById("imgUrl").value;
-		const categoriaProduto = document.getElementById("categoriaProduto").value;
-		const tipoProduto = document.getElementById("tipoProduto").value;
-		const ornamentoProduto = document.getElementById("ornamentoProduto").value
-
 
 		// Envia os dados para o backend usando fetch
         fetch("http://localhost:8080/produto", {

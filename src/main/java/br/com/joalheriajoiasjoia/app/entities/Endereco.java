@@ -41,7 +41,7 @@ public class Endereco {
 	private String uf;
 	
 	@ManyToOne
-	@JoinColumn(name = "Usuario", nullable = false)
+	@JoinColumn(name = "Usuario", nullable = true)
 	private Usuario usuarios;
 
 	public Endereco() {
