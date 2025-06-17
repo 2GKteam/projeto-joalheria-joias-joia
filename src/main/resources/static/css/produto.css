@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 body {
+<<<<<<< HEAD
             font-family: Arial, sans-serif;
             max-width: 400px;
             margin: 100px auto;
@@ -50,10 +51,65 @@ body {
         }
 
         nav .logo a{
+=======
+			font-family: Arial, sans-serif;
+			max-width: 400px;
+			margin: 100px auto;
+			padding: 20px;
+			border: 1px solid #b29f9f;
+			border-radius: 8px;
+			background-color: #f8f4f4;
+		}
+
+		h1 {
+			text-align: center;
+			 font-family: 'Poppins', sans-serif;
+			color: #c9083f;
+			margin-bottom: 20px;
+		}
+
+		label {
+			display: block;
+			margin-top: 10px;
+			font-weight: bold;
+		}
+
+		input[type="email"],
+		input[type="password"] {
+			width: 100%;
+			padding: 8px;
+			margin-top: 5px;
+			border-radius: 4px;
+			border: 1px solid #d2bfbf;
+			box-sizing: border-box;
+		}
+
+		button {
+			margin-top: 20px;
+			width: 100%;
+			padding: 10px;
+			font-size: 16px;
+			background-color: #FCB3AA;
+			color: white;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+
+		button:hover {
+			background-color: #e28374;
+		}
+
+		nav .logo a{
+>>>>>>> f249e9113fc7acdb39917a1643e25f9248a02122
       font-family: 'Poppins', sans-serif;
       text-decoration: none;
       color:  #2b0a04;
       font-size: 35px;
       font-weight: 600;
       margin-left: 5%;
+<<<<<<< HEAD
    }
+=======
+   }
+>>>>>>> f249e9113fc7acdb39917a1643e25f9248a02122
